@@ -14,7 +14,18 @@ iwencai_headers = {
 xueqiu_headers = {
     'Host': 'stock.xueqiu.com',
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
-                  '(KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'
+                  '(KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36',
+    'Cookie': 'xq_a_token=a664afb60c7036c7947578ac1a5860c4cfb6b3b5; '
+              'xqat=a664afb60c7036c7947578ac1a5860c4cfb6b3b5; '
+              'xq_r_token=01d9e7361ed17caf0fa5eff6465d1c90dbde9ae2; '
+              'xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV'
+              '4cCI6MTU4NTM2MjYwNywiY3RtIjoxNTgzNjgyNjI5MDgyLCJjaWQiOiJkOWQwbjRBWnVwIn0.'
+              'nVT2cBhNGU9Hgs0JvEtoV8MagcYPVvaz6iXOF83DRC2AUW1vpsYqyuPsIUm7zNWN7N1kBrUr8NyC1OOT4kW'
+              '_cf8yZ1KewXyjVntWdAZBwRSXdDrIC6zjjP1N8ARQyFepsaz8dHJlpTSangUWdC3qrLW7qKQGYS0OUUvd'
+              'ILhnHGvOQrAmHeJWgN-8h4HT9BrpmlR9fErjIfn954_k7O-8yjiXTvTepMWt2MxtjREtiF6zMmZLppZpsBoGV5prsgbxaF'
+              '-OYY8LhMSzLSndfZ_LjM9YN7QrIBA4VX_xn3vUICrBm2YvMGoglMeo7T-cOvQGU-Atw-q0BA78hd0NkCoMFg; '
+              'u=941583682640528; cookiesu=831583682643721; device_id=24700f9f1986800ab4fcc880530dd0ed;'
+              ' Hm_lvt_1db88642e346389874251b5a1eded6e3=1583682646; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1583682646'
 }
 
 
@@ -32,7 +43,7 @@ def request_iwencai_stock_pick(condition):
 
 def request_iwencai_robot_api(question):
     url = 'http://www.iwencai.com/unifiedwap/unified-wap/result/get-robot-data' \
-          '?source=Ths_iwencai_Xuangu&version=2.0&secondary_intent='
+          '?source=Ths_iwencai_Xuangu&version=2.0&secondary_intent=hkstock'
     body = {
         'question': question,
         'add_info': {"urp": {"scene": 1, "company": 1, "business": 1}}
@@ -120,6 +131,7 @@ class Stock:
             if '归属于母公司所有者的净利润[' in k:
                 d_profit[re.sub(r'\D', '', k)] = data[k]
         res = request_iwencai_robot_api(self.code + ' 2014到2018年年度分红总额')
+        print(res)
         content = res['data']['answer'][0]['txt'][0]['content']
         json_data = json.loads(content)
         dividend = json_data['components'][0]['data']
@@ -128,7 +140,7 @@ class Stock:
             d_dividend[d['时间区间']] = d['年度分红总额']
         # 求除数
         for k in d_profit:
-            self.dividend_rate.append((k, d_dividend.get(k, 0) / d_profit[k]))
+            self.dividend_rate.append((k, d_dividend.get(k, 0) / d_profit[k] * 100))
 
     def get_rights_issue(self):
         """
@@ -165,6 +177,7 @@ class SeaSelect:
     def select(self):
         res = request_iwencai_stock_pick(self.condition)
         data = res['data']['data']
+        # return [Stock(data[0])]
         return [Stock(d) for d in data]
 
 
@@ -209,12 +222,13 @@ def check_avg(arr, value, tag, should_small=False, check_first=True):
     :param check_first: 是否检查第一年
     :return: True
     """
-    if check_first and ((should_small and arr[0][1] >= value) or (not should_small and arr[0][1] < value)):
+    if check_first and (
+            (should_small and float(arr[0][1]) >= value) or (not should_small and float(arr[0][1]) < value)):
         raise Exception('最近一年的[{}]值={}%不符合要求值：{}'.format(tag, arr[0][1], value))
     v_sum = 0
     for a in arr:
-        v_sum += a[1]
-    v_avg = v_sum / len(arr) > value
+        v_sum += float(a[1])
+    v_avg = v_sum / len(arr)
     if (should_small and v_avg >= value) or (not should_small and v_avg < value):
         raise Exception('连续{}年的[{}]平均值={}，不符合要求值：{}'.format(len(arr), tag, v_avg, value))
 
@@ -250,6 +264,10 @@ def main_run():
           '2014年到2018年毛利率大于30%，上市大于三年,2014到2018年资产负债率小于70%'
     ss = SeaSelect(con)
     base_stocks = ss.select()
+
+    # TODO debug
+    # base_stocks = base_stocks[:1]
+
     # print base_stocks
     print_stock(base_stocks)
 

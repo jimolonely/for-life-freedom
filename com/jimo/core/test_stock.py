@@ -1,6 +1,19 @@
 from unittest import TestCase
 import json
 
+import requests
+
+xueqiu_headers = {
+    'Host': 'stock.xueqiu.com',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
+                  '(KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'
+}
+
 
 class TestStock(TestCase):
 
@@ -10,3 +23,21 @@ class TestStock(TestCase):
         '''
         d = json.loads(s)
         print(d['components'][0]['data'])
+
+    def test_xueqiu(self):
+        d = 'xq_a_token=a664afb60c7036c7947578ac1a5860c4cfb6b3b5; ' \
+            'xqat=a664afb60c7036c7947578ac1a5860c4cfb6b3b5; ' \
+            'xq_r_token=01d9e7361ed17caf0fa5eff6465d1c90dbde9ae2; ' \
+            'xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV' \
+            '4cCI6MTU4NTM2MjYwNywiY3RtIjoxNTgzNjgyNjI5MDgyLCJjaWQiOiJkOWQwbjRBWnVwIn0.' \
+            'nVT2cBhNGU9Hgs0JvEtoV8MagcYPVvaz6iXOF83DRC2AUW1vpsYqyuPsIUm7zNWN7N1kBrUr8NyC1OOT4kW' \
+            '_cf8yZ1KewXyjVntWdAZBwRSXdDrIC6zjjP1N8ARQyFepsaz8dHJlpTSangUWdC3qrLW7qKQGYS0OUUvd' \
+            'ILhnHGvOQrAmHeJWgN-8h4HT9BrpmlR9fErjIfn954_k7O-8yjiXTvTepMWt2MxtjREtiF6zMmZLppZpsBoGV5prsgbxaF' \
+            '-OYY8LhMSzLSndfZ_LjM9YN7QrIBA4VX_xn3vUICrBm2YvMGoglMeo7T-cOvQGU-Atw-q0BA78hd0NkCoMFg; ' \
+            'u=941583682640528; cookiesu=831583682643721; device_id=24700f9f1986800ab4fcc880530dd0ed;' \
+            ' Hm_lvt_1db88642e346389874251b5a1eded6e3=1583682646; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1583682646'
+
+        xueqiu_headers['Cookie'] = d
+        url = 'https://stock.xueqiu.com/v5/stock/quote.json?symbol=01928&extend=detail'
+        r = requests.get(url, headers=xueqiu_headers)
+        print(r.json())
