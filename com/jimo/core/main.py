@@ -56,22 +56,6 @@ def request_iwencai_robot_api(question):
 class Stock:
     """股票实体"""
 
-    code = ''
-    name = ''
-    current_price = 0
-    eps = 0
-    pe_ttm = 0
-    # 股息TTM
-    dividend = 0
-
-    roe = []
-    profit_cash_ratio = []
-    gross_profit = []
-    asset_liability = []
-    dividend_rate = []
-    # 供股及公开招股记录
-    rights_issue = {}
-
     def __init__(self, p_json):
         """json to stock:
         {'股票代码': '1928.HK', '股票简称': '金沙中国有限公司',
@@ -100,6 +84,21 @@ class Stock:
         '港股@最新价': '34.700',
         '港股@最新涨跌幅': '-3.477', 'hqCode': 'HK1928', 'marketId': '177'}
         """
+        self.code = ''
+        self.name = ''
+        # 供股及公开招股记录
+        self.rights_issue = {}
+        self.dividend_rate = []
+        self.asset_liability = []
+        self.gross_profit = []
+        self.profit_cash_ratio = []
+        self.roe = []
+        # 股息TTM
+        self.dividend = 0
+        self.pe_ttm = 0
+        self.eps = 0
+        self.current_price = 0
+
         hq_code = re.sub(r'\D', '', p_json['hqCode'])
         self.code = hq_code.zfill(5)
         self.name = p_json['股票简称']
@@ -183,8 +182,12 @@ class SeaSelect:
 
 def print_stock(base_stocks):
     print('海选出的股票有：')
+    print('|股票|编码|ROE|')
     for stock in base_stocks:
-        print(stock.name)
+        print('|{}|{}|'.format(stock.name, stock.code), end=' ')
+        for roe in stock.roe:
+            print('[{}]{:.2f},'.format(roe[0], float(roe[1])), end=' ')
+        print('|')
 
 
 def select_carefully(stock):
@@ -199,11 +202,11 @@ def select_carefully(stock):
     :return true/false 是否是好股票
     """
     try:
-        check_avg(stock.roe, 20, 'ROE')
-        check_avg(stock.profit_cash_ratio, 100, '净利润现金含量', False)
-        check_avg(stock.gross_profit, 40, '毛利率')
-        check_avg(stock.asset_liability, 60, '资产负债率', True)
-        check_avg(stock.dividend_rate, 30, '派息比率')
+        check_avg(stock.name, stock.roe, 20, 'ROE')
+        check_avg(stock.name, stock.profit_cash_ratio, 100, '净利润现金含量', False)
+        check_avg(stock.name, stock.gross_profit, 40, '毛利率')
+        check_avg(stock.name, stock.asset_liability, 60, '资产负债率', True)
+        check_avg(stock.name, stock.dividend_rate, 30, '派息比率')
         if stock.rights_issue['has']:
             raise Exception('有过合股、供股、配股记录：{}'.format(stock.rights_issue['content']))
         return True
@@ -212,9 +215,10 @@ def select_carefully(stock):
         return False
 
 
-def check_avg(arr, value, tag, should_small=False, check_first=True):
+def check_avg(name, arr, value, tag, should_small=False, check_first=True):
     """
     验证不合格抛异常
+    :param name:
     :param should_small: 默认小于value
     :param tag: 说明
     :param value: 目标值
@@ -222,15 +226,26 @@ def check_avg(arr, value, tag, should_small=False, check_first=True):
     :param check_first: 是否检查第一年
     :return: True
     """
+    ok = True
+    msg = ''
+    v_last_year = float(arr[len(arr) - 1][1])
     if check_first and (
-            (should_small and float(arr[0][1]) >= value) or (not should_small and float(arr[0][1]) < value)):
-        raise Exception('最近一年的[{}]值={}%不符合要求值：{}'.format(tag, arr[0][1], value))
+            (should_small and v_last_year >= value) or (not should_small and v_last_year < value)):
+        msg = '最近一年的[{}]值={:.2f}%不符合要求值：{:.2f} '.format(tag, v_last_year, value)
+        ok = False
     v_sum = 0
+    print('{}的{}:'.format(name, tag), end=' ')
     for a in arr:
+        print('({}/{:.2f})'.format(a[0], float(a[1])), end=', ')
         v_sum += float(a[1])
     v_avg = v_sum / len(arr)
+    tmp = '连续{}年的[{}]平均值={:.2f}'.format(len(arr), tag, v_avg)
+    print('{}:{},要求值为：{}'.format(name, tmp, value))
     if (should_small and v_avg >= value) or (not should_small and v_avg < value):
-        raise Exception('连续{}年的[{}]平均值={}，不符合要求值：{}'.format(len(arr), tag, v_avg, value))
+        msg += ' {}，不符合要求值：{:.2f}'.format(tmp, value)
+        ok = False
+    if not ok:
+        raise Exception(msg)
 
 
 def cal_good_price(stock, max_10_year_bond_rate):
@@ -249,14 +264,18 @@ def cal_good_price(stock, max_10_year_bond_rate):
     # 2.
     gp2 = stock.eps * 15
     # 3.min
-    print('{}:根据股息率计算的好价格为（TTM股息/国债收益率）：{}/{}={},'
-          '根据市盈率计算的好价格为（每股收益×15）：{}×15={},'
-          '取最小值为：{}'.format(stock.name, stock.dividend, max_10_year_bond_rate, gp1,
-                            stock.eps, gp2, min(gp1, gp2)))
+    print('{}:根据股息率计算的好价格为（TTM股息/国债收益率）：{:.2f}/{:.4f}={:.2f},'
+          '根据市盈率计算的好价格为（每股收益×15）：{:.2f}×15={:.2f},'
+          '取最小值为：{:.2f}'.format(stock.name, stock.dividend, max_10_year_bond_rate, gp1,
+                                stock.eps, gp2, min(gp1, gp2)))
 
 
 def get_max_10_year_bond_rate():
-    return 0.027
+    # TODO
+    c_10 = 0.027376
+    a_10 = 0.0074
+    print('中国和美国十年期国债收益率分别为：{:.4f},{:.4f},取较大者：{:.4f}'.format(c_10, a_10, max(c_10, a_10)))
+    return max(c_10, a_10)
 
 
 def main_run():
@@ -277,6 +296,7 @@ def main_run():
     # 获取中国美国的最大10年期国债收益率
     max_10_year_bond_rate = get_max_10_year_bond_rate()
 
+    print('精挑细选共选出{}家公司,计算其好价格：'.format(len(good_stocks)))
     # for each good stock, calculate its good price
     for stock in good_stocks:
         cal_good_price(stock, max_10_year_bond_rate)
