@@ -202,11 +202,11 @@ def select_carefully(stock):
     :return true/false 是否是好股票
     """
     try:
-        check_avg(stock.name, stock.roe, 20, 'ROE')
+        check_avg(stock.name, stock.roe, 19, 'ROE')
         check_avg(stock.name, stock.profit_cash_ratio, 100, '净利润现金含量', False)
         check_avg(stock.name, stock.gross_profit, 40, '毛利率')
         check_avg(stock.name, stock.asset_liability, 60, '资产负债率', True)
-        check_avg(stock.name, stock.dividend_rate, 30, '派息比率')
+        check_avg(stock.name, stock.dividend_rate, 29, '派息比率')
         if stock.rights_issue['has']:
             raise Exception('有过合股、供股、配股记录：{}'.format(stock.rights_issue['content']))
         return True
