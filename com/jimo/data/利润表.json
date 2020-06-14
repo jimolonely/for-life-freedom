@@ -1,0 +1,175 @@
+{
+  "quote_name": "双汇发展",
+  "currency_name": "人民币",
+  "org_type": 1,
+  "last_report_name": "2020一季报",
+  "statuses": null,
+  "currency": "CNY",
+  "list": [
+    {
+      "report_date": 1577721600000,
+      "report_name": "2019年报",
+      "ctime": 1585039523000,
+      "net_profit": [
+        5.66598889371E9,
+        0.12533283835593095
+      ],
+      "net_profit_atsopc": [
+        5.43761256507E9,
+        0.10703008946695493
+      ],
+      "total_revenue": [
+        6.034830574359E10,
+        0.2343107056083756
+      ],
+      "op": [
+        6.85167585899E9,
+        0.08830721934302883
+      ],
+      "income_from_chg_in_fv": [
+        2.787959173E7,
+        -0.08589819378444681
+      ],
+      "invest_incomes_from_rr": [
+        1.430400188E7,
+        -0.06938701729935072
+      ],
+      "invest_income": [
+        1.4274311209E8,
+        1.3939301681007144
+      ],
+      "exchg_gain": [
+        null,
+        null
+      ],
+      "operating_taxes_and_surcharge": [
+        2.9712900821E8,
+        -0.14700760128740883
+      ],
+      "asset_impairment_loss": [
+        3.3490714733E8,
+        -0.1423551442862666
+      ],
+      "non_operating_income": [
+        1.657709631E7,
+        0.17291405445040264
+      ],
+      "non_operating_payout": [
+        2.975962212E7,
+        -0.01637370638671519
+      ],
+      "profit_total_amt": [
+        6.83849333318E9,
+        0.08900199206564466
+      ],
+      "minority_gal": [
+        2.2837632864E8,
+        0.8559235654033244
+      ],
+      "basic_eps": [
+        1.6382,
+        0.10704149209352622
+      ],
+      "dlt_earnings_per_share": [
+        1.6382,
+        0.10704149209352622
+      ],
+      "othr_compre_income_atoopc": [
+        -85497.42,
+        -1.03887608157432
+      ],
+      "othr_compre_income_atms": [
+        -82144.58,
+        -1.0388760814155868
+      ],
+      "total_compre_income": [
+        5.66582125171E9,
+        0.12433659657869488
+      ],
+      "total_compre_income_atsopc": [
+        5.43752706765E9,
+        0.10651725601982391
+      ],
+      "total_compre_income_atms": [
+        2.2829418406E8,
+        0.8239364859639233
+      ],
+      "othr_compre_income": [
+        -167642.0,
+        -1.0388760814965408
+      ],
+      "net_profit_after_nrgal_atsolc": [
+        5.16970454937E9,
+        0.11212962301885626
+      ],
+      "income_tax_expenses": [
+        1.17250443947E9,
+        -0.05796587187476602
+      ],
+      "credit_impairment_loss": [
+        -141773.61,
+        null
+      ],
+      "revenue": [
+        6.030973176299E10,
+        0.23740785049076077
+      ],
+      "operating_costs": [
+        5.38600535967E10,
+        0.25208101379559633
+      ],
+      "operating_cost": [
+        4.897678288371E10,
+        0.28122549444083417
+      ],
+      "sales_fee": [
+        2.70593037968E9,
+        0.023532727405282377
+      ],
+      "manage_fee": [
+        1.308001261E9,
+        0.14125861670437406
+      ],
+      "financing_expenses": [
+        9.74471557E7,
+        -0.4029086567484764
+      ],
+      "rad_cost": [
+        8.828431496E7,
+        0.1489959913780744
+      ],
+      "finance_cost_interest_fee": [
+        1.2207579419E8,
+        -0.3865294736255537
+      ],
+      "finance_cost_interest_income": [
+        4.486686708E7,
+        0.14615475403169195
+      ],
+      "asset_disposal_income": [
+        4432083.65,
+        -0.9084395880106219
+      ],
+      "other_income": [
+        1.8836892463E8,
+        -0.3303656225668417
+      ],
+      "noncurrent_assets_dispose_gain": [
+        null,
+        null
+      ],
+      "noncurrent_asset_disposal_loss": [
+        null,
+        null
+      ],
+      "net_profit_bi": [
+        null,
+        null
+      ],
+      "continous_operating_np": [
+        5.66598889371E9,
+        0.12533283835593095
+      ]
+    }
+  ]
+}
