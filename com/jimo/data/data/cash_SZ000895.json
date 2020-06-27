@@ -1,0 +1,944 @@
+[
+    {
+        "report_date": 1577721600000,
+        "report_name": "2019年报",
+        "ctime": null,
+        "ncf_from_oa": [
+            4423615424.35,
+            -0.09281375053108433
+        ],
+        "ncf_from_ia": [
+            -1374708552.69,
+            0.37800786001676173
+        ],
+        "ncf_from_fa": [
+            -2384831286.18,
+            0.5981550031875336
+        ],
+        "cash_received_of_othr_oa": [
+            569791500.12,
+            -0.13927730019949952
+        ],
+        "sub_total_of_ci_from_oa": [
+            66730220299.22,
+            0.22900136719133413
+        ],
+        "cash_paid_to_employee_etc": [
+            3736496312.42,
+            0.02221280802670449
+        ],
+        "payments_of_all_taxes": [
+            4458199454.39,
+            0.07796155796969652
+        ],
+        "othrcash_paid_relating_to_oa": [
+            999789753.17,
+            0.2249364707424197
+        ],
+        "sub_total_of_cos_from_oa": [
+            62306604874.87,
+            0.26075429050725685
+        ],
+        "cash_received_of_dspsl_invest": [
+            5337549141.52,
+            0.2869477021638973
+        ],
+        "invest_income_cash_received": [
+            142409314.58,
+            -0.14814499130881392
+        ],
+        "net_cash_of_disposal_assets": [
+            9406132.89,
+            -0.9069864724962132
+        ],
+        "net_cash_of_disposal_branch": [
+            null,
+            null
+        ],
+        "cash_received_of_othr_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_ia": [
+            5489364588.99,
+            0.1923154040523993
+        ],
+        "invest_paid_cash": [
+            6196149141.52,
+            -0.015752074516766978
+        ],
+        "cash_paid_for_assets": [
+            667924000.16,
+            0.2874145992909739
+        ],
+        "othrcash_paid_relating_to_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_ia": [
+            6864073141.68,
+            0.007330277689922581
+        ],
+        "cash_received_of_absorb_invest": [
+            null,
+            null
+        ],
+        "cash_received_from_investor": [
+            null,
+            null
+        ],
+        "cash_received_from_bond_issue": [
+            null,
+            null
+        ],
+        "cash_received_of_borrowing": [
+            12475245713.55,
+            -0.04633888085457274
+        ],
+        "cash_received_of_othr_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_fa": [
+            12475245713.55,
+            -0.07588782741877607
+        ],
+        "cash_pay_for_debt": [
+            12490029815.86,
+            -0.11939648599006238
+        ],
+        "cash_paid_of_distribution": [
+            2050953743.59,
+            -0.6068180502778242
+        ],
+        "branch_paid_to_minority_holder": [
+            93851943.14,
+            -0.5263512371746893
+        ],
+        "othrcash_paid_relating_to_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_fa": [
+            14860076999.73,
+            -0.2353730253692578
+        ],
+        "effect_of_exchange_chg_on_cce": [
+            1042329.43,
+            0.7384870722626125
+        ],
+        "net_increase_in_cce": [
+            665117914.91,
+            1.2035193489516574
+        ],
+        "initial_balance_of_cce": [
+            2481081039.77,
+            -0.5684448265882901
+        ],
+        "final_balance_of_cce": [
+            3146198954.68,
+            0.2680758525209871
+        ],
+        "cash_received_of_sales_service": [
+            65703253086.78,
+            0.23258124892144644
+        ],
+        "refund_of_tax_and_levies": [
+            null,
+            null
+        ],
+        "goods_buy_and_service_cash_pay": [
+            52797269684.51,
+            0.3146062919518412
+        ],
+        "net_cash_amt_from_branch": [
+            null,
+            null
+        ]
+    },
+    {
+        "report_date": 1546185600000,
+        "report_name": "2018年报",
+        "ctime": null,
+        "ncf_from_oa": [
+            4876193203.92,
+            -0.13696364671846079
+        ],
+        "ncf_from_ia": [
+            -2210170296.89,
+            -4.5020358375394816
+        ],
+        "ncf_from_fa": [
+            -5934704438.52,
+            -1.3924510715996172
+        ],
+        "cash_received_of_othr_oa": [
+            661991951.94,
+            0.13452862774702953
+        ],
+        "sub_total_of_ci_from_oa": [
+            54296294601.95,
+            -0.027895625504960123
+        ],
+        "cash_paid_to_employee_etc": [
+            3655301795.36,
+            0.11320591358768475
+        ],
+        "payments_of_all_taxes": [
+            4135768498.82,
+            -0.0020369396942883635
+        ],
+        "othrcash_paid_relating_to_oa": [
+            816197229.04,
+            0.05203589947226214
+        ],
+        "sub_total_of_cos_from_oa": [
+            49420101398.03,
+            -0.015621008403441208
+        ],
+        "cash_received_of_dspsl_invest": [
+            4147448363.71,
+            0.6928360668204082
+        ],
+        "invest_income_cash_received": [
+            167175532.37,
+            2.397575370021312
+        ],
+        "net_cash_of_disposal_assets": [
+            101126504.31,
+            0.2775595170154734
+        ],
+        "net_cash_of_disposal_branch": [
+            188203025.3,
+            null
+        ],
+        "cash_received_of_othr_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_ia": [
+            4603953425.69,
+            0.7856128596397156
+        ],
+        "invest_paid_cash": [
+            6295313387.1,
+            1.5695156682040818
+        ],
+        "cash_paid_for_assets": [
+            518810335.48,
+            -0.014803495471344916
+        ],
+        "othrcash_paid_relating_to_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_ia": [
+            6814123722.58,
+            1.2865720311448832
+        ],
+        "cash_received_of_absorb_invest": [
+            415285050.6,
+            9.382126265
+        ],
+        "cash_received_from_investor": [
+            null,
+            null
+        ],
+        "cash_received_from_bond_issue": [
+            null,
+            null
+        ],
+        "cash_received_of_borrowing": [
+            13081424274.41,
+            0.7572681841396339
+        ],
+        "cash_received_of_othr_fa": [
+            3000000.0,
+            null
+        ],
+        "sub_total_of_ci_from_fa": [
+            13499709325.01,
+            0.8037654928479264
+        ],
+        "cash_pay_for_debt": [
+            14183488502.09,
+            1.480736218721465
+        ],
+        "cash_paid_of_distribution": [
+            5216296793.48,
+            0.25669429668788074
+        ],
+        "branch_paid_to_minority_holder": [
+            198146708.08,
+            0.6166496199901177
+        ],
+        "othrcash_paid_relating_to_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_fa": [
+            19434413763.53,
+            0.9503107608250638
+        ],
+        "effect_of_exchange_chg_on_cce": [
+            599561.22,
+            4.345028038459375
+        ],
+        "net_increase_in_cce": [
+            -3268081970.27,
+            -2.180849676173101
+        ],
+        "initial_balance_of_cce": [
+            5749163010.04,
+            0.9317072956054223
+        ],
+        "final_balance_of_cce": [
+            2481081039.77,
+            -0.568040100951097
+        ],
+        "cash_received_of_sales_service": [
+            53305413451.87,
+            -0.023641445377318188
+        ],
+        "refund_of_tax_and_levies": [
+            null,
+            null
+        ],
+        "goods_buy_and_service_cash_pay": [
+            40162039393.65,
+            -0.040686572640654894
+        ],
+        "net_cash_amt_from_branch": [
+            null,
+            null
+        ]
+    },
+    {
+        "report_date": 1514649600000,
+        "report_name": "2017年报",
+        "ctime": null,
+        "ncf_from_oa": [
+            5650043807.98,
+            0.01876028944375864
+        ],
+        "ncf_from_ia": [
+            -401700454.55,
+            -1.2277077994131886
+        ],
+        "ncf_from_fa": [
+            -2480595949.89,
+            0.6320351526171826
+        ],
+        "cash_received_of_othr_oa": [
+            583495150.1,
+            -0.05562709847212187
+        ],
+        "sub_total_of_ci_from_oa": [
+            55854387683.58,
+            -0.02030231007188767
+        ],
+        "cash_paid_to_employee_etc": [
+            3283581007.56,
+            0.027060369125036125
+        ],
+        "payments_of_all_taxes": [
+            4144210004.68,
+            0.01721214852745203
+        ],
+        "othrcash_paid_relating_to_oa": [
+            775826404.26,
+            -0.03167718239358507
+        ],
+        "sub_total_of_cos_from_oa": [
+            50204343875.6,
+            -0.02451172470391074
+        ],
+        "cash_received_of_dspsl_invest": [
+            2450000000.0,
+            -0.7331799935091949
+        ],
+        "invest_income_cash_received": [
+            49204363.16,
+            -0.5144876156750743
+        ],
+        "net_cash_of_disposal_assets": [
+            79156002.49,
+            4.431794646366931
+        ],
+        "net_cash_of_disposal_branch": [
+            null,
+            null
+        ],
+        "cash_received_of_othr_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_ia": [
+            2578360365.65,
+            -0.7227014289138232
+        ],
+        "invest_paid_cash": [
+            2450000000.0,
+            -0.6309273200033176
+        ],
+        "cash_paid_for_assets": [
+            526605944.19,
+            -0.4121219408685198
+        ],
+        "othrcash_paid_relating_to_ia": [
+            3454876.01,
+            null
+        ],
+        "sub_total_of_cos_from_ia": [
+            2980060820.2,
+            -0.6044534421524528
+        ],
+        "cash_received_of_absorb_invest": [
+            40000000.0,
+            -0.8047828208882382
+        ],
+        "cash_received_from_investor": [
+            40000000.0,
+            -0.8047828208882382
+        ],
+        "cash_received_from_bond_issue": [
+            null,
+            null
+        ],
+        "cash_received_of_borrowing": [
+            7444182050.57,
+            1.8785588090991359
+        ],
+        "cash_received_of_othr_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_fa": [
+            7484182050.57,
+            1.5586194379088951
+        ],
+        "cash_pay_for_debt": [
+            5717451293.31,
+            1.6471648835292645
+        ],
+        "cash_paid_of_distribution": [
+            4150808042.36,
+            -0.4353249268471129
+        ],
+        "branch_paid_to_minority_holder": [
+            122566266.45,
+            -0.5156790911749781
+        ],
+        "othrcash_paid_relating_to_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_fa": [
+            9964778000.46,
+            0.030859022028307363
+        ],
+        "effect_of_exchange_chg_on_cce": [
+            -179239.52,
+            -1.014411907617601
+        ],
+        "net_increase_in_cce": [
+            2767568164.02,
+            3.762249193765761
+        ],
+        "initial_balance_of_cce": [
+            2976208156.96,
+            0.24264405350528656
+        ],
+        "final_balance_of_cce": [
+            5743776320.98,
+            0.9298973788335045
+        ],
+        "cash_received_of_sales_service": [
+            54596145237.31,
+            -0.025694407124969548
+        ],
+        "refund_of_tax_and_levies": [
+            null,
+            null
+        ],
+        "goods_buy_and_service_cash_pay": [
+            41865398990.82,
+            -0.011408679389219559
+        ],
+        "net_cash_amt_from_branch": [
+            null,
+            null
+        ]
+    },
+    {
+        "report_date": 1483113600000,
+        "report_name": "2016年报",
+        "ctime": null,
+        "ncf_from_oa": [
+            5545999256.67,
+            -0.03820892061550813
+        ],
+        "ncf_from_ia": [
+            1764104943.2,
+            1.5363118314120998
+        ],
+        "ncf_from_fa": [
+            -6741393824.8,
+            -1.2697298796785883
+        ],
+        "cash_received_of_othr_oa": [
+            617865198.33,
+            0.10304470808067562
+        ],
+        "sub_total_of_ci_from_oa": [
+            57011860146.04,
+            0.15508551289538453
+        ],
+        "cash_paid_to_employee_etc": [
+            3197067189.3,
+            -0.062120814703452966
+        ],
+        "payments_of_all_taxes": [
+            4074086227.42,
+            0.1761478195507778
+        ],
+        "othrcash_paid_relating_to_oa": [
+            801206364.4,
+            -0.49905571801324816
+        ],
+        "sub_total_of_cos_from_oa": [
+            51465860889.37,
+            0.18065500974874468
+        ],
+        "cash_received_of_dspsl_invest": [
+            9182220000.0,
+            -0.1658404306057096
+        ],
+        "invest_income_cash_received": [
+            101345227.74,
+            -0.3510405439057363
+        ],
+        "net_cash_of_disposal_assets": [
+            14572716.32,
+            -0.36149922301469145
+        ],
+        "net_cash_of_disposal_branch": [
+            null,
+            null
+        ],
+        "cash_received_of_othr_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_ia": [
+            9298137944.06,
+            -0.16882499087541586
+        ],
+        "invest_paid_cash": [
+            6638258892.59,
+            -0.45677318074885126
+        ],
+        "cash_paid_for_assets": [
+            895774108.27,
+            -0.602939821605408
+        ],
+        "othrcash_paid_relating_to_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_ia": [
+            7534033000.86,
+            -0.4795524550500626
+        ],
+        "cash_received_of_absorb_invest": [
+            204900000.0,
+            5.83
+        ],
+        "cash_received_from_investor": [
+            204900000.0,
+            5.83
+        ],
+        "cash_received_from_bond_issue": [
+            null,
+            null
+        ],
+        "cash_received_of_borrowing": [
+            2586079543.36,
+            0.04590077349446469
+        ],
+        "cash_received_of_othr_fa": [
+            134106516.6,
+            -0.2378079819180446
+        ],
+        "sub_total_of_ci_from_fa": [
+            2925086059.96,
+            0.09204722443624226
+        ],
+        "cash_pay_for_debt": [
+            2159839505.61,
+            -0.0189394777207794
+        ],
+        "cash_paid_of_distribution": [
+            7350790285.79,
+            1.2341448202946617
+        ],
+        "branch_paid_to_minority_holder": [
+            253068294.63,
+            0.6365940011513463
+        ],
+        "othrcash_paid_relating_to_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_fa": [
+            9666479884.76,
+            0.711285788771772
+        ],
+        "effect_of_exchange_chg_on_cce": [
+            12436904.59,
+            0.2184938270856464
+        ],
+        "net_increase_in_cce": [
+            581147279.66,
+            2.2033871072041893
+        ],
+        "initial_balance_of_cce": [
+            2395060877.3,
+            -0.1678000171076787
+        ],
+        "final_balance_of_cce": [
+            2976208156.96,
+            0.24264405350528656
+        ],
+        "cash_received_of_sales_service": [
+            56035955901.89,
+            0.14834559362223193
+        ],
+        "refund_of_tax_and_levies": [
+            null,
+            null
+        ],
+        "goods_buy_and_service_cash_pay": [
+            42348539905.2,
+            0.20586532591900186
+        ],
+        "net_cash_amt_from_branch": [
+            null,
+            null
+        ]
+    },
+    {
+        "report_date": 1451491200000,
+        "report_name": "2015年报",
+        "ctime": null,
+        "ncf_from_oa": [
+            5766324283.46,
+            0.22374225555837873
+        ],
+        "ncf_from_ia": [
+            -3289326917.43,
+            -0.46759750166332387
+        ],
+        "ncf_from_fa": [
+            -2970130448.19,
+            0.12260584598307324
+        ],
+        "cash_received_of_othr_oa": [
+            560145199.74,
+            0.29422053600160863
+        ],
+        "sub_total_of_ci_from_oa": [
+            49357263604.78,
+            -0.017372042684341685
+        ],
+        "cash_paid_to_employee_etc": [
+            3408826253.34,
+            -0.03736645890049149
+        ],
+        "payments_of_all_taxes": [
+            3463923632.47,
+            0.11261572765442715
+        ],
+        "othrcash_paid_relating_to_oa": [
+            1599392174.36,
+            -0.035567577645656545
+        ],
+        "sub_total_of_cos_from_oa": [
+            43590939321.32,
+            -0.042332391034827395
+        ],
+        "cash_received_of_dspsl_invest": [
+            11007750000.0,
+            -0.22934668005259157
+        ],
+        "invest_income_cash_received": [
+            156165730.83,
+            -0.007536363521583626
+        ],
+        "net_cash_of_disposal_assets": [
+            22823333.73,
+            2.6818340573533246
+        ],
+        "net_cash_of_disposal_branch": [
+            null,
+            null
+        ],
+        "cash_received_of_othr_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_ia": [
+            11186739064.56,
+            -0.2256817279739229
+        ],
+        "invest_paid_cash": [
+            12220050000.0,
+            -0.1394124929751839
+        ],
+        "cash_paid_for_assets": [
+            2256015981.99,
+            -0.0935511815996596
+        ],
+        "othrcash_paid_relating_to_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_ia": [
+            14476065981.99,
+            -0.13257293923481386
+        ],
+        "cash_received_of_absorb_invest": [
+            30000000.0,
+            -0.24797589478377402
+        ],
+        "cash_received_from_investor": [
+            30000000.0,
+            -0.24797589478377402
+        ],
+        "cash_received_from_bond_issue": [
+            null,
+            null
+        ],
+        "cash_received_of_borrowing": [
+            2472585936.35,
+            4.328563263439691
+        ],
+        "cash_received_of_othr_fa": [
+            175948466.29,
+            1.2319590153789863
+        ],
+        "sub_total_of_ci_from_fa": [
+            2678534402.64,
+            3.596380474735219
+        ],
+        "cash_pay_for_debt": [
+            2201535436.97,
+            4.178888788641267
+        ],
+        "cash_paid_of_distribution": [
+            3290203132.32,
+            -0.050904123891269505
+        ],
+        "branch_paid_to_minority_holder": [
+            154631077.99,
+            -0.4301781087559495
+        ],
+        "othrcash_paid_relating_to_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_fa": [
+            5648664850.83,
+            0.4235829939571989
+        ],
+        "effect_of_exchange_chg_on_cce": [
+            10206785.06,
+            106.60498807643732
+        ],
+        "net_increase_in_cce": [
+            -482926297.1,
+            0.4718286768277616
+        ],
+        "initial_balance_of_cce": [
+            2877987174.4,
+            -0.24110190663912998
+        ],
+        "final_balance_of_cce": [
+            2395060877.3,
+            -0.1678000171076787
+        ],
+        "cash_received_of_sales_service": [
+            48797118405.04,
+            -0.020080211846176314
+        ],
+        "refund_of_tax_and_levies": [
+            null,
+            null
+        ],
+        "goods_buy_and_service_cash_pay": [
+            35118797261.15,
+            -0.056072650311282175
+        ],
+        "net_cash_amt_from_branch": [
+            null,
+            null
+        ]
+    },
+    {
+        "report_date": 1419955200000,
+        "report_name": "2014年报",
+        "ctime": null,
+        "ncf_from_oa": [
+            4712041491.8,
+            0.21780485096229502
+        ],
+        "ncf_from_ia": [
+            -2241300434.01,
+            -0.1297736014165914
+        ],
+        "ncf_from_fa": [
+            -3385172370.47,
+            -0.5616487757965125
+        ],
+        "cash_received_of_othr_oa": [
+            432805062.32,
+            0.060317905871315816
+        ],
+        "sub_total_of_ci_from_oa": [
+            50229858856.87,
+            0.015306326780724508
+        ],
+        "cash_paid_to_employee_etc": [
+            3541146353.0,
+            0.175063676601295
+        ],
+        "payments_of_all_taxes": [
+            3113315358.01,
+            -0.016577404974767004
+        ],
+        "othrcash_paid_relating_to_oa": [
+            1658376613.32,
+            -0.03224484186600012
+        ],
+        "sub_total_of_cos_from_oa": [
+            45517817365.07,
+            -0.001875002926875232
+        ],
+        "cash_received_of_dspsl_invest": [
+            14283660000.0,
+            -0.3365310412297897
+        ],
+        "invest_income_cash_received": [
+            157351589.61,
+            0.9425489145346999
+        ],
+        "net_cash_of_disposal_assets": [
+            6198903.42,
+            4.624493066404531
+        ],
+        "net_cash_of_disposal_branch": [
+            null,
+            null
+        ],
+        "cash_received_of_othr_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_ci_from_ia": [
+            14447210493.03,
+            -0.33148373929348257
+        ],
+        "invest_paid_cash": [
+            14199660000.0,
+            -0.3620554239750883
+        ],
+        "cash_paid_for_assets": [
+            2488850927.04,
+            0.8625583348650963
+        ],
+        "othrcash_paid_relating_to_ia": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_ia": [
+            16688510927.04,
+            -0.2927011021151585
+        ],
+        "cash_received_of_absorb_invest": [
+            39892338.28,
+            null
+        ],
+        "cash_received_from_investor": [
+            39892338.28,
+            null
+        ],
+        "cash_received_from_bond_issue": [
+            null,
+            null
+        ],
+        "cash_received_of_borrowing": [
+            464024881.4,
+            -0.639362772494629
+        ],
+        "cash_received_of_othr_fa": [
+            78831405.54,
+            null
+        ],
+        "sub_total_of_ci_from_fa": [
+            582748625.22,
+            -0.5470914234214439
+        ],
+        "cash_pay_for_debt": [
+            425098032.96,
+            -0.761228125134979
+        ],
+        "cash_paid_of_distribution": [
+            3466670981.45,
+            1.1390138645704093
+        ],
+        "branch_paid_to_minority_holder": [
+            271367387.54,
+            1.488888769881536
+        ],
+        "othrcash_paid_relating_to_fa": [
+            null,
+            null
+        ],
+        "sub_total_of_cos_from_fa": [
+            3967920995.69,
+            0.14866647732003202
+        ],
+        "effect_of_exchange_chg_on_cce": [
+            94854.2,
+            null
+        ],
+        "net_increase_in_cce": [
+            -914336458.48,
+            -2.2394639989287946
+        ],
+        "initial_balance_of_cce": [
+            3792323632.88,
+            -0.06927089248717712
+        ],
+        "final_balance_of_cce": [
+            2877987174.4,
+            -0.24110190663912998
+        ],
+        "cash_received_of_sales_service": [
+            49797053794.55,
+            0.014931859633433959
+        ],
+        "refund_of_tax_and_levies": [
+            null,
+            null
+        ],
+        "goods_buy_and_service_cash_pay": [
+            37204979040.74,
+            -0.013400522894677814
+        ],
+        "net_cash_amt_from_branch": [
+            null,
+            null
+        ]
+    }
+]

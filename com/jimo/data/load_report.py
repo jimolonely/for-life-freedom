@@ -3,6 +3,7 @@ import xlwt
 import json
 from collections import OrderedDict
 import locale
+import codecs
 
 
 class LoadReport(object):
@@ -47,6 +48,18 @@ class LoadReport(object):
         url = 'https://stock.xueqiu.com/v5/stock/finance/cn/income.json?symbol={}&type=Q4&is_detail=true&count={}' \
               '&timestamp='.format(self.code, self.year_cnt)
         return self.req_data(url)
+
+    def write_json(self):
+        """
+        写入到json文件，用于离线分析
+        """
+        self.save_json(self.req_asset(), 'asset')
+        self.save_json(self.req_profit(), 'profit')
+        self.save_json(self.req_cash_flow(), 'cash')
+
+    def save_json(self, data, name):
+        with codecs.open('data/{}_{}.json'.format(name, self.code), 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
 
     def write_excel(self):
         wb = xlwt.Workbook(encoding='utf-8')
@@ -106,10 +119,11 @@ class LoadReport(object):
 
 
 if __name__ == '__main__':
-    # r = LoadReport('SZ000895', 2019)
+    r = LoadReport('SZ000895', 2019)
     # r = LoadReport('SZ002726', 2019)
-    r = LoadReport('SZ002840', 2019)
-    r.write_excel()
+    # r = LoadReport('SZ002840', 2019)
+    # r.write_excel()
+    r.write_json()
     # j = r.req_cash_flow()[0]
     # for k in sorted(j.keys()):
     #     print('"{}":"",'.format(k))
