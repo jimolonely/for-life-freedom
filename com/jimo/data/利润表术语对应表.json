@@ -19,7 +19,9 @@
   "other_income": "其他收益",
   "op": "营业利润",
   "non_operating_income": "加：营业外收入",
+  "noncurrent_assets_dispose_gain": "其中：非流动资产处置利得",
   "non_operating_payout": "减：营业外支出",
+  "noncurrent_asset_disposal_loss": "其中：非流动资产处置损失",
   "profit_total_amt": "利润总额",
   "income_tax_expenses": "减：所得税费用",
   "net_profit_bi": "净利润差额(合计平衡项目)",
@@ -37,7 +39,5 @@
   "total_compre_income_atms": "归属于少数股东的综合收益总额",
   "ctime": "",
   "exchg_gain": "",
-  "noncurrent_asset_disposal_loss": "",
-  "noncurrent_assets_dispose_gain": "",
   "othr_compre_income_atms": ""
 }

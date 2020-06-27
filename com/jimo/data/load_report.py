@@ -2,6 +2,7 @@ import requests
 import xlwt
 import json
 from collections import OrderedDict
+import locale
 
 
 class LoadReport(object):
@@ -10,6 +11,13 @@ class LoadReport(object):
         self.code = code
         self.last_year = last_year + 1
         self.year_cnt = 6
+        # 企业名
+        self.name = ''
+
+    def req_cash_flow(self):
+        url = 'https://stock.xueqiu.com/v5/stock/finance/cn/cash_flow.json' \
+              '?symbol={}&type=Q4&is_detail=true&count={}&timestamp='.format(self.code, self.year_cnt)
+        return self.req_data(url)
 
     def req_asset(self):
         url = ' https://stock.xueqiu.com/v5/stock/finance/cn/balance.json?' \
@@ -17,11 +25,6 @@ class LoadReport(object):
         return self.req_data(url)
 
     def req_data(self, url):
-        header = self.get_header()
-        res = requests.get(url, headers=header)
-        return res.json()['data']['list']
-
-    def req_profit(self):
         """
         请求最近6年年报数据
         :return: 结构如下：{
@@ -34,6 +37,13 @@ class LoadReport(object):
         }
         list里就是具体项目数据，查看文件
         """
+        header = self.get_header()
+        res = requests.get(url, headers=header)
+        json_data = res.json()['data']
+        self.name = json_data['quote_name']
+        return json_data['list']
+
+    def req_profit(self):
         url = 'https://stock.xueqiu.com/v5/stock/finance/cn/income.json?symbol={}&type=Q4&is_detail=true&count={}' \
               '&timestamp='.format(self.code, self.year_cnt)
         return self.req_data(url)
@@ -44,10 +54,12 @@ class LoadReport(object):
         self.write_sheet(sheet, self.req_profit(), '利润表术语对应表.json')
         sheet = wb.add_sheet(sheetname='资产负债表', cell_overwrite_ok=True)
         self.write_sheet(sheet, self.req_asset(), '资产负债表术语对应表.json')
-        wb.save('{}财报.xlsx'.format(self.code))
+        sheet = wb.add_sheet(sheetname='现金流量表', cell_overwrite_ok=True)
+        self.write_sheet(sheet, self.req_cash_flow(), '现金流量表术语对应表.json')
+        wb.save('{}[{}]财报.xlsx'.format(self.name, self.code))
 
     def write_sheet(self, sheet, data, item_map_name):
-        sheet.write(0, 0, self.code)
+        sheet.write(0, 0, self.name)
         i = 1
         from_year = self.last_year - len(data)
         for y in range(from_year, self.last_year):
@@ -63,13 +75,17 @@ class LoadReport(object):
             sheet.write(i, 0, name_map[k])
             keys.append(k)
             i = i + 1
+
+        locale.setlocale(locale.LC_ALL, '')
         j = 1
-        for one_year in data:
+        for one_year in reversed(data):
             i = 1
             for k in keys:
-                d = one_year[k]
+                d = one_year.get(k, '')
                 if isinstance(d, list) and d[0]:
-                    sheet.write(i, j, str(d[0]))
+                    sheet.col(j).width = 256 * (len(str(d[0])) + 1) * 2
+                    # sheet.write(i, j, str(d[0]), currency_style)
+                    sheet.write(i, j, locale.format_string("%.2f", d[0], True))
                 else:
                     sheet.write(i, j, '0')
                 i += 1
@@ -90,8 +106,10 @@ class LoadReport(object):
 
 
 if __name__ == '__main__':
-    r = LoadReport('SZ000895', 2019)
+    # r = LoadReport('SZ000895', 2019)
+    # r = LoadReport('SZ002726', 2019)
+    r = LoadReport('SZ002840', 2019)
     r.write_excel()
-    # j = r.req_asset()[0]
+    # j = r.req_cash_flow()[0]
     # for k in sorted(j.keys()):
     #     print('"{}":"",'.format(k))
