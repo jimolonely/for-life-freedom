@@ -9,8 +9,19 @@ class LoadReport(object):
     def __init__(self, code, last_year):
         self.code = code
         self.last_year = last_year + 1
+        self.year_cnt = 6
 
-    def req_data(self):
+    def req_asset(self):
+        url = ' https://stock.xueqiu.com/v5/stock/finance/cn/balance.json?' \
+              'symbol={}&type=Q4&is_detail=true&count={}&timestamp='.format(self.code, self.year_cnt)
+        return self.req_data(url)
+
+    def req_data(self, url):
+        header = self.get_header()
+        res = requests.get(url, headers=header)
+        return res.json()['data']['list']
+
+    def req_profit(self):
         """
         请求最近6年年报数据
         :return: 结构如下：{
@@ -23,23 +34,22 @@ class LoadReport(object):
         }
         list里就是具体项目数据，查看文件
         """
-        url = 'https://stock.xueqiu.com/v5/stock/finance/cn/income.json?symbol={}&type=Q4&is_detail=true&count=6' \
-              '&timestamp='.format(self.code)
-        header = self.get_header()
-        res = requests.get(url, headers=header)
-        return res.json()['data']['list']
+        url = 'https://stock.xueqiu.com/v5/stock/finance/cn/income.json?symbol={}&type=Q4&is_detail=true&count={}' \
+              '&timestamp='.format(self.code, self.year_cnt)
+        return self.req_data(url)
 
     def write_excel(self):
         wb = xlwt.Workbook(encoding='utf-8')
         sheet = wb.add_sheet(sheetname='利润表', cell_overwrite_ok=True)
-        self.write_sheet(sheet, '利润表术语对应表.json')
+        self.write_sheet(sheet, self.req_profit(), '利润表术语对应表.json')
+        sheet = wb.add_sheet(sheetname='资产负债表', cell_overwrite_ok=True)
+        self.write_sheet(sheet, self.req_asset(), '资产负债表术语对应表.json')
         wb.save('{}财报.xlsx'.format(self.code))
 
-    def write_sheet(self, sheet, item_map_name):
-        data = self.req_data()
+    def write_sheet(self, sheet, data, item_map_name):
         sheet.write(0, 0, self.code)
         i = 1
-        from_year = self.last_year - len(data) + 1
+        from_year = self.last_year - len(data)
         for y in range(from_year, self.last_year):
             sheet.write(0, i, y)
             i = i + 1
@@ -82,6 +92,6 @@ class LoadReport(object):
 if __name__ == '__main__':
     r = LoadReport('SZ000895', 2019)
     r.write_excel()
-    # j = r.req_data()['list'][0]
+    # j = r.req_asset()[0]
     # for k in sorted(j.keys()):
     #     print('"{}":"",'.format(k))
