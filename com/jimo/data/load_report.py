@@ -53,12 +53,17 @@ class LoadReport(object):
         """
         写入到json文件，用于离线分析
         """
-        self.save_json(self.req_asset(), 'asset')
-        self.save_json(self.req_profit(), 'profit')
-        self.save_json(self.req_cash_flow(), 'cash')
+        data = {
+            'code': self.code,
+            'asset': self.req_asset(),
+            'cash': self.req_cash_flow(),
+            'profit': self.req_profit(),
+            'name': self.name
+        }
+        self.save_json(data)
 
-    def save_json(self, data, name):
-        with codecs.open('data/{}_{}.json'.format(name, self.code), 'w', encoding='utf-8') as f:
+    def save_json(self, data):
+        with codecs.open('data/{}.json'.format(self.code), 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 
     def write_excel(self):
@@ -119,9 +124,12 @@ class LoadReport(object):
 
 
 if __name__ == '__main__':
-    r = LoadReport('SZ000895', 2019)
+    # r = LoadReport('SZ000895', 2019)
     # r = LoadReport('SZ002726', 2019)
-    # r = LoadReport('SZ002840', 2019)
+    r = LoadReport('SZ002840', 2019)
+    # r = LoadReport('SZ300117', 2019)
+    # r = LoadReport('SZ002081', 2019)
+    # r = LoadReport('SZ002375', 2019)
     # r.write_excel()
     r.write_json()
     # j = r.req_cash_flow()[0]
