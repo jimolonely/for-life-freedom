@@ -21,6 +21,21 @@ def format_value(val):
     return '0'
 
 
+def format_value_percent(val):
+    if val:
+        return '%.2f%%' % (val * 100)
+    return '0'
+
+
+def col_width(val):
+    """计算excel里列的宽度，根据val自适应"""
+    return 256 * (len(str(val)) + 1) * 2
+
+
+def pure_val(v):
+    return v if v else 0
+
+
 class GenerateReport:
     """
     分为23个步骤
@@ -47,8 +62,10 @@ class GenerateReport:
         if i > 0
     """
 
-    def __init__(self, codes, from_year, end_year, file_name='分析报告'):
+    def __init__(self, codes, target, from_year, end_year, file_name='分析报告'):
         self.codes = codes
+        self.target = target
+        assert target in codes
         self.from_year = from_year
         self.end_year = end_year + 1
         self.file_name = file_name
@@ -78,11 +95,66 @@ class GenerateReport:
     def execute_all(self):
         # TODO 23 step
         self.step_05()
+        self.step_06()
+        self.step_07()
         self.wb.save('{}.xlsx'.format(self.file_name))
+
+    def step_07(self):
+        log.info('开始偿债风险分析...')
+        sheet = self.wb.add_sheet('07偿债风险', cell_overwrite_ok=True)
+        sheet.write(0, 0, '偿债风险分析')
+        sheet.write(0, 1, '科目名称')
+        sheet.write(1, 1, '短期借款')
+        sheet.write(2, 1, '其中：应付利息')
+        sheet.write(3, 1, '一年内到期的非流动负债')
+        sheet.write(4, 1, '长期借款')
+        sheet.write(5, 1, '长期应付款')
+        sheet.write(6, 1, '小计')
+        sheet.write(7, 1, '货币资金')
+        code = self.target
+        # 合并单元格
+        sheet.write_merge(1, 7, 0, 0, self.name_map[code])
+        col = 2
+        for year in range(self.from_year, self.end_year):
+            sheet.col(col).width = col_width(123456789.12345)
+            sheet.write(0, col, str(year))
+            st_loan_ = pure_val(self.data[code]['asset'][year]['st_loan'][0])
+            interest_payable_ = pure_val(self.data[code]['asset'][year]['interest_payable'][0])
+            noncurrent_liab_due_in1y = pure_val(self.data[code]['asset'][year]['noncurrent_liab_due_in1y'][0])
+            lt_loan_ = pure_val(self.data[code]['asset'][year]['lt_loan'][0])
+            lt_payable_ = pure_val(self.data[code]['asset'][year]['lt_payable'][0])
+            sheet.write(1, col, format_value(st_loan_))
+            sheet.write(2, col, format_value(interest_payable_))
+            sheet.write(3, col, format_value(noncurrent_liab_due_in1y))
+            sheet.write(4, col, format_value(lt_loan_))
+            sheet.write(5, col, format_value(lt_payable_))
+            sheet.write(6, col,
+                        format_value(st_loan_ + interest_payable_ + noncurrent_liab_due_in1y + lt_loan_ + lt_payable_))
+            sheet.write(7, col, format_value(self.data[code]['asset'][year]['currency_funds'][0]))
+            col += 1
+
+    def step_06(self):
+        log.info('开始资产负债率分析...')
+        sheet = self.wb.add_sheet('06资产负债率', cell_overwrite_ok=True)
+        row = 1
+        sheet.write(0, 0, '资产负债率')
+        for code in self.codes:
+            col = 1
+            sheet.write(row, 0, self.name_map[code])
+            sheet.write(row + 1, 0, '>资产负债率')
+            for year in range(self.from_year, self.end_year):
+                total_liab_ = self.data[code]['asset'][year]['total_liab'][0]
+                total_assets_ = self.data[code]['asset'][year]['total_assets'][0]
+                sheet.col(col).width = col_width(total_assets_)
+                sheet.write(0, col, str(year))
+                sheet.write(row, col, '{}/{}'.format(total_liab_, total_assets_))
+                sheet.write(row + 1, col, format_value_percent(total_liab_ / total_assets_))
+                col += 1
+            row += 2
 
     def step_05(self):
         log.info('开始总资产分析...')
-        sheet = self.wb.add_sheet('总资产', cell_overwrite_ok=True)
+        sheet = self.wb.add_sheet('05总资产', cell_overwrite_ok=True)
         row = 1
         sheet.write(0, 0, '总资产')
         for code in self.codes:
@@ -90,13 +162,14 @@ class GenerateReport:
             sheet.write(row, 0, self.name_map[code])
             sheet.write(row + 1, 0, '增长率')
             for year in range(self.from_year, self.end_year):
+                sheet.col(col).width = 256 * 20
                 sheet.write(0, col, str(year))
                 sheet.write(row, col, format_value(self.data[code]['asset'][year]['total_assets'][0]))
-                sheet.write(row + 1, col, format_value(self.data[code]['asset'][year]['total_assets'][1]))
+                sheet.write(row + 1, col, format_value_percent(self.data[code]['asset'][year]['total_assets'][1]))
                 col += 1
             row += 2
 
 
 if __name__ == '__main__':
-    g = GenerateReport(['SZ000895', 'SZ002726', 'SZ002840'], 2015, 2019)
+    g = GenerateReport(['SZ000895', 'SZ002726', 'SZ002840'], 'SZ000895', 2015, 2019)
     g.execute_all()
