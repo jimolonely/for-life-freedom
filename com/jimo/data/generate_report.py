@@ -105,7 +105,50 @@ class GenerateReport:
         self.step_07()
         self.step_08()
         self.step_09()
+        self.step_10()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_11(self):
+        # TODO
+        pass
+
+    def step_10(self):
+        log.info('开始主业专注度分析...')
+        sheet = self.wb.add_sheet('10主业专注度', cell_overwrite_ok=True)
+        sheet.write(0, 0, '主业专注度分析')
+        sheet.write(0, 1, '科目名称')
+        sheet.write(1, 1, '以公允价值计量且其变动计入当期损益的金融资产/交易性金融资产')
+        sheet.write(2, 1, '可供出售金融资产')
+        sheet.write(3, 1, '持有至到期投资')
+        sheet.write(4, 1, '投资性房地产')
+        sheet.write(5, 1, '长期股权投资')
+        sheet.write(6, 1, '与主业无关的投资小计')
+        sheet.write(7, 1, '总资产')
+        sheet.write(8, 1, '与主业无关的投资占总资产的比率')
+        code = self.target
+        # 合并单元格
+        sheet.write_merge(1, 8, 0, 0, self.name_map[code])
+        col = 2
+        for year in range(self.from_year, self.end_year):
+            sheet.write(0, col, str(year))
+            total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
+            sheet.col(col).width = col_width(total_assets_)
+            tradable_fnncl_assets = pure_val(self.data[code]['asset'][year]['tradable_fnncl_assets'][0])
+            salable_financial_assets = pure_val(self.data[code]['asset'][year]['salable_financial_assets'][0])
+            held_to_maturity_invest = pure_val(self.data[code]['asset'][year]['held_to_maturity_invest'][0])
+            invest_property = pure_val(self.data[code]['asset'][year]['invest_property'][0])
+            lt_equity_invest = pure_val(self.data[code]['asset'][year]['lt_equity_invest'][0])
+            other_invest_sum = tradable_fnncl_assets + salable_financial_assets + held_to_maturity_invest \
+                               + invest_property + lt_equity_invest
+            sheet.write(1, col, format_value(tradable_fnncl_assets))
+            sheet.write(2, col, format_value(salable_financial_assets))
+            sheet.write(3, col, format_value(held_to_maturity_invest))
+            sheet.write(4, col, format_value(invest_property))
+            sheet.write(5, col, format_value(lt_equity_invest))
+            sheet.write(6, col, format_value(other_invest_sum))
+            sheet.write(7, col, format_value(total_assets_))
+            sheet.write(8, col, format_value_percent(other_invest_sum / total_assets_))
+            col += 1
 
     def step_09(self):
         log.info('开始公司轻重分析...')
