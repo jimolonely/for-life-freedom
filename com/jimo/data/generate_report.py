@@ -98,35 +98,54 @@ class GenerateReport:
         self.name_map[code] = one_obj['name']
         return item
 
-    def write_one(self, title, items, get_value):
+    def write_one(self, title, items, get_value, start_row=0, code=None, sheet=None):
         """
         单个目标公司分析模板
+        :param sheet: sheet实例
+        :param code: 要处理的公司
+        :param title: 分析项
+        :param items: 分析类目列表['','']
+        :param get_value: 函数，自定义返回数据，传入年份
+        :param start_row: excel中的起始行
+        :return:
+        """
+        if sheet is None:
+            sheet = self.wb.add_sheet(title, cell_overwrite_ok=True)
+        sheet.write(start_row, 0, title)
+        sheet.write(start_row, 1, '科目名称')
+        i = 1
+        for item in items:
+            sheet.write(i, 1, item)
+            i += 1
+        if code is None:
+            code = self.target
+        # 合并单元格
+        sheet.write_merge(start_row + 1, start_row + len(items), 0, 0, self.name_map[code])
+        col = 2
+        for year in range(self.from_year, self.end_year):
+            sheet.write(start_row, col, str(year))
+            total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
+            sheet.col(col).width = col_width(total_assets_)
+            values = get_value(year, code)
+            row = 1
+            for v in values:
+                sheet.write(start_row + row, col, v)
+                row += 1
+            col += 1
+
+    def write_many(self, title, items, get_value):
+        """
+        多个目标公司分析模板
         :param title: 分析项
         :param items: 分析类目列表['','']
         :param get_value: 函数，自定义返回数据，传入年份
         :return:
         """
         sheet = self.wb.add_sheet(title, cell_overwrite_ok=True)
-        sheet.write(0, 0, title)
-        sheet.write(0, 1, '科目名称')
-        i = 1
-        for item in items:
-            sheet.write(i, 1, item)
-            i += 1
-        code = self.target
-        # 合并单元格
-        sheet.write_merge(1, len(items), 0, 0, self.name_map[code])
-        col = 2
-        for year in range(self.from_year, self.end_year):
-            sheet.write(0, col, str(year))
-            total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
-            sheet.col(col).width = col_width(total_assets_)
-            values = get_value(year)
-            row = 1
-            for v in values:
-                sheet.write(row, col, v)
-                row += 1
-            col += 1
+        start_row = 0
+        for code in self.codes:
+            self.write_one(title, items, get_value, start_row, code, sheet)
+            start_row += 2 * len(items)
 
     def execute_all(self):
         # TODO 23 step
@@ -137,14 +156,26 @@ class GenerateReport:
         self.step_09()
         self.step_10()
         self.step_13()
+        self.step_14()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_14(self):
+        log.info('竞争力分析...')
+        items = ['营业收入', '营业成本', '毛利率']
+
+        def get_value(year, code):
+            operating_cost = pure_val(self.data[code]['profit'][year]['operating_cost'][0])
+            revenue = pure_val(self.data[code]['profit'][year]['revenue'][0])
+            return [format_value(operating_cost), format_value(revenue),
+                    format_value_percent(1 - operating_cost / revenue)]
+
+        self.write_many('14竞争力分析', items, get_value)
 
     def step_13(self):
         log.info('行业地位和成长能力分析...')
         items = ['销售商品、提供劳务收到的现金', '营业收入', '销售商品、提供劳务收到的现金/营业收入', '营业收入增长率']
-        code = self.target
 
-        def get_value(year):
+        def get_value(year, code):
             cash_received_of_sales_service = pure_val(
                 self.data[code]['cash'][year]['cash_received_of_sales_service'][0])
             revenue = pure_val(self.data[code]['profit'][year]['revenue'][0])
