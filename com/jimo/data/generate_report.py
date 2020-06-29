@@ -1,8 +1,9 @@
-import json
-import logging
-import xlwt
-import locale
 import codecs
+import json
+import locale
+import logging
+
+import xlwt
 
 
 def get_logger(name):
@@ -34,6 +35,11 @@ def col_width(val):
 
 def pure_val(v):
     return v if v else 0
+
+
+def a_or_b(a, b):
+    x = a if a else b
+    return x if x else 0
 
 
 class GenerateReport:
@@ -98,7 +104,49 @@ class GenerateReport:
         self.step_06()
         self.step_07()
         self.step_08()
-        self.wb.save('{}.xlsx'.format(self.file_name))
+        self.step_09()
+        self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_09(self):
+        log.info('开始公司轻重分析...')
+        sheet = self.wb.add_sheet('09轻重分析', cell_overwrite_ok=True)
+        start_row = 0
+        for code in self.codes:
+            sheet.write(start_row, 0, '行业地位分析')
+            sheet.write(start_row, 1, '科目名称')
+            sheet.write(start_row + 1, 1, '固定资产')
+            sheet.write(start_row + 2, 1, '在建工程')
+            sheet.write(start_row + 3, 1, '工程物资')
+            sheet.write(start_row + 4, 1, '小计')
+            sheet.write(start_row + 5, 1, '总资产')
+            sheet.write(start_row + 6, 1, '小计/总资产')
+            # 合并单元格
+            sheet.write_merge(start_row + 1, start_row + 6, 0, 0, self.name_map[code])
+            col = 2
+            for year in range(self.from_year, self.end_year):
+                total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
+                sheet.col(col).width = col_width(total_assets_)
+                sheet.write(start_row, col, str(year))
+                fixed_asset_sum = pure_val(self.data[code]['asset'][year]['fixed_asset_sum'][0])
+                fixed_asset = pure_val(self.data[code]['asset'][year]['fixed_asset'][0])
+                construction_in_process_sum = pure_val(self.data[code]['asset'][year]['construction_in_process_sum'][0])
+                construction_in_process = pure_val(self.data[code]['asset'][year]['construction_in_process'][0])
+                project_goods_and_material = pure_val(self.data[code]['asset'][year]['project_goods_and_material'][0])
+
+                final_fixed_asset = a_or_b(fixed_asset, fixed_asset_sum)
+                final_construction = a_or_b(construction_in_process, construction_in_process_sum)
+                sum_asset = final_fixed_asset + final_construction + project_goods_and_material
+
+                sheet.write(start_row + 1, col, format_value(final_fixed_asset))
+                sheet.write(start_row + 2, col, format_value(final_construction))
+                sheet.write(start_row + 3, col, format_value(project_goods_and_material))
+                sheet.write(start_row + 4, col, format_value(sum_asset))
+                sheet.write(start_row + 5, col, format_value(total_assets_))
+                sheet.write(start_row + 6, col, format_value_percent(sum_asset / total_assets_))
+                col += 1
+
+            # 下一家公司位置
+            start_row += 9
 
     def step_08(self):
         log.info('开始行业地位分析...')

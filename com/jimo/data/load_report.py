@@ -1,9 +1,10 @@
+import codecs
+import json
+import locale
+from collections import OrderedDict
+
 import requests
 import xlwt
-import json
-from collections import OrderedDict
-import locale
-import codecs
 
 
 class LoadReport(object):
@@ -74,7 +75,7 @@ class LoadReport(object):
         self.write_sheet(sheet, self.req_asset(), '资产负债表术语对应表.json')
         sheet = wb.add_sheet(sheetname='现金流量表', cell_overwrite_ok=True)
         self.write_sheet(sheet, self.req_cash_flow(), '现金流量表术语对应表.json')
-        wb.save('{}[{}]财报.xlsx'.format(self.name, self.code))
+        wb.save('{}[{}]财报.xls'.format(self.name, self.code))
 
     def write_sheet(self, sheet, data, item_map_name):
         sheet.write(0, 0, self.name)
