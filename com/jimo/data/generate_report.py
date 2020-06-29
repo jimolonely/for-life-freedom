@@ -98,6 +98,36 @@ class GenerateReport:
         self.name_map[code] = one_obj['name']
         return item
 
+    def write_one(self, title, items, get_value):
+        """
+        单个目标公司分析模板
+        :param title: 分析项
+        :param items: 分析类目列表['','']
+        :param get_value: 函数，自定义返回数据，传入年份
+        :return:
+        """
+        sheet = self.wb.add_sheet(title, cell_overwrite_ok=True)
+        sheet.write(0, 0, title)
+        sheet.write(0, 1, '科目名称')
+        i = 1
+        for item in items:
+            sheet.write(i, 1, item)
+            i += 1
+        code = self.target
+        # 合并单元格
+        sheet.write_merge(1, len(items), 0, 0, self.name_map[code])
+        col = 2
+        for year in range(self.from_year, self.end_year):
+            sheet.write(0, col, str(year))
+            total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
+            sheet.col(col).width = col_width(total_assets_)
+            values = get_value(year)
+            row = 1
+            for v in values:
+                sheet.write(row, col, v)
+                row += 1
+            col += 1
+
     def execute_all(self):
         # TODO 23 step
         self.step_05()
@@ -106,7 +136,24 @@ class GenerateReport:
         self.step_08()
         self.step_09()
         self.step_10()
+        self.step_13()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_13(self):
+        log.info('行业地位和成长能力分析...')
+        items = ['销售商品、提供劳务收到的现金', '营业收入', '销售商品、提供劳务收到的现金/营业收入', '营业收入增长率']
+        code = self.target
+
+        def get_value(year):
+            cash_received_of_sales_service = pure_val(
+                self.data[code]['cash'][year]['cash_received_of_sales_service'][0])
+            revenue = pure_val(self.data[code]['profit'][year]['revenue'][0])
+            revenue_growth_rate = pure_val(self.data[code]['profit'][year]['revenue'][1])
+            return [format_value(cash_received_of_sales_service), format_value(revenue),
+                    format_value_percent(cash_received_of_sales_service / revenue),
+                    format_value_percent(revenue_growth_rate)]
+
+        self.write_one('13行业地位和成长能力分析', items, get_value)
 
     def step_11(self):
         # TODO
