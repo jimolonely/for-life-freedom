@@ -97,7 +97,41 @@ class GenerateReport:
         self.step_05()
         self.step_06()
         self.step_07()
+        self.step_08()
         self.wb.save('{}.xlsx'.format(self.file_name))
+
+    def step_08(self):
+        log.info('开始行业地位分析...')
+        sheet = self.wb.add_sheet('08行业地位', cell_overwrite_ok=True)
+        start_row = 0
+        for code in self.codes:
+            sheet.write(start_row, 0, '行业地位分析')
+            sheet.write(start_row, 1, '科目名称')
+            sheet.write(start_row + 1, 1, '应付票据及应付账款')
+            sheet.write(start_row + 2, 1, '预收款项')
+            sheet.write(start_row + 3, 1, '应收票据及应收账款')
+            sheet.write(start_row + 4, 1, '预付款项')
+            sheet.write(start_row + 5, 1, '无偿占有上下游资金')
+            # 合并单元格
+            sheet.write_merge(start_row + 1, start_row + 5, 0, 0, self.name_map[code])
+            col = 2
+            for year in range(self.from_year, self.end_year):
+                sheet.col(col).width = col_width(123456789.12345)
+                sheet.write(start_row, col, str(year))
+                bp_and_ap = pure_val(self.data[code]['asset'][year]['bp_and_ap'][0])
+                pre_recv = pure_val(self.data[code]['asset'][year]['pre_receivable'][0])
+                ar_and_br = pure_val(self.data[code]['asset'][year]['ar_and_br'][0])
+                pre_pay = pure_val(self.data[code]['asset'][year]['pre_payment'][0])
+                occupy = (bp_and_ap + pre_recv) - (ar_and_br + pre_pay)
+                sheet.write(start_row + 1, col, format_value(bp_and_ap))
+                sheet.write(start_row + 2, col, format_value(pre_recv))
+                sheet.write(start_row + 3, col, format_value(ar_and_br))
+                sheet.write(start_row + 4, col, format_value(pre_pay))
+                sheet.write(start_row + 5, col, format_value(occupy))
+                col += 1
+
+            # 下一家公司位置
+            start_row += 8
 
     def step_07(self):
         log.info('开始偿债风险分析...')
