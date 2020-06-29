@@ -112,12 +112,15 @@ class GenerateReport:
             sheet.write(start_row + 3, 1, '应收票据及应收账款')
             sheet.write(start_row + 4, 1, '预付款项')
             sheet.write(start_row + 5, 1, '无偿占有上下游资金')
+            sheet.write(start_row + 6, 1, '应收账款/总资产')
             # 合并单元格
             sheet.write_merge(start_row + 1, start_row + 5, 0, 0, self.name_map[code])
             col = 2
             for year in range(self.from_year, self.end_year):
-                sheet.col(col).width = col_width(123456789.12345)
+                total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
+                sheet.col(col).width = col_width(total_assets_)
                 sheet.write(start_row, col, str(year))
+                account_receivable = pure_val(self.data[code]['asset'][year]['account_receivable'][0])
                 bp_and_ap = pure_val(self.data[code]['asset'][year]['bp_and_ap'][0])
                 pre_recv = pure_val(self.data[code]['asset'][year]['pre_receivable'][0])
                 ar_and_br = pure_val(self.data[code]['asset'][year]['ar_and_br'][0])
@@ -128,10 +131,11 @@ class GenerateReport:
                 sheet.write(start_row + 3, col, format_value(ar_and_br))
                 sheet.write(start_row + 4, col, format_value(pre_pay))
                 sheet.write(start_row + 5, col, format_value(occupy))
+                sheet.write(start_row + 6, col, format_value_percent(account_receivable / total_assets_))
                 col += 1
 
             # 下一家公司位置
-            start_row += 8
+            start_row += 9
 
     def step_07(self):
         log.info('开始偿债风险分析...')
