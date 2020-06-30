@@ -174,7 +174,22 @@ class GenerateReport:
         self.step_20()
         self.step_21()
         self.step_22()
+        self.step_23()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_23(self):
+        log.info('公司稳定性分析...')
+        items = ['现金及现金等价物的净增加额', '分红金额', '现金及现金等价物的净增加额+当年分红金额']
+
+        def get_value(year, code):
+            net_increase_in_cce = pure_val(self.data[code]['cash'][year]['net_increase_in_cce'][0])
+            # TODO
+            dividend = 0
+
+            return [format_value(net_increase_in_cce), format_value(dividend),
+                    format_value(net_increase_in_cce + dividend)]
+
+        self.write_one('23公司稳定性分析', items, get_value)
 
     def step_22(self):
         log.info('公司类型分析...')
