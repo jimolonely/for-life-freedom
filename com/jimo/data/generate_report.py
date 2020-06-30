@@ -171,7 +171,35 @@ class GenerateReport:
         self.step_17()
         self.step_18()
         self.step_19()
+        self.step_20()
+        self.step_21()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_21(self):
+        log.info('分红分析')
+        items = ['TODO']
+
+        def get_value(year, code):
+            return ['']
+
+        self.write_one('21f分红分析', items, get_value)
+
+    def step_20(self):
+        log.info('未来成长能力分析...')
+        items = ['购建固定资产、无形资产和其他长期资产支付的现金', '经营活动产生的现金流量净额', '比值',
+                 '处置固定资产、无形资产和其他长期资产收回的现金净额', '收回与购买金额比率']
+
+        def get_value(year, code):
+            cash_paid_for_assets = pure_val(self.data[code]['cash'][year]['cash_paid_for_assets'][0])
+            ncf_from_oa = pure_val(self.data[code]['cash'][year]['ncf_from_oa'][0])
+            net_cash_of_disposal_assets = pure_val(self.data[code]['cash'][year]['net_cash_of_disposal_assets'][0])
+
+            return [format_value(cash_paid_for_assets), format_value(ncf_from_oa),
+                    format_value_percent(cash_paid_for_assets / ncf_from_oa),
+                    format_value(net_cash_of_disposal_assets),
+                    format_value_percent(net_cash_of_disposal_assets / cash_paid_for_assets)]
+
+        self.write_one('20未来成长能力分析', items, get_value)
 
     def step_19(self):
         log.info('造血能力分析...')
