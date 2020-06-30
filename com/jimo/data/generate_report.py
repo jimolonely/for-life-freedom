@@ -145,7 +145,7 @@ class GenerateReport:
         start_row = 0
         for code in self.codes:
             self.write_one(title, items, get_value, start_row, code, sheet)
-            start_row += 2 * len(items)
+            start_row += len(items) + 3
 
     def execute_all(self):
         # TODO 23 step
@@ -158,7 +158,21 @@ class GenerateReport:
         self.step_13()
         self.step_14()
         self.step_15()
+        self.step_16()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_16(self):
+        log.info('盈利和利润质量分析...')
+        items = ['营业收入', '营业利润', '营业利润率', '利润总额', '营业利润/利润总额']
+
+        def get_value(year, code):
+            revenue = pure_val(self.data[code]['profit'][year]['revenue'][0])
+            op = pure_val(self.data[code]['profit'][year]['op'][0])
+            profit_total_amt = pure_val(self.data[code]['profit'][year]['profit_total_amt'][0])
+            return [format_value(revenue), format_value(op), format_value(profit_total_amt),
+                    format_value_percent(op / revenue), format_value_percent(op / profit_total_amt)]
+
+        self.write_many('16盈利和利润质量分析', items, get_value)
 
     def step_15(self):
         log.info('成本管控力分析...')
