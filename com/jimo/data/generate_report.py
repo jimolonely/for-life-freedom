@@ -115,7 +115,7 @@ class GenerateReport:
         sheet.write(start_row, 1, '科目名称')
         i = 1
         for item in items:
-            sheet.write(i, 1, item)
+            sheet.write(start_row + i, 1, item)
             i += 1
         if code is None:
             code = self.target
@@ -157,7 +157,29 @@ class GenerateReport:
         self.step_10()
         self.step_13()
         self.step_14()
+        self.step_15()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_15(self):
+        log.info('成本管控力分析...')
+        items = ['营业收入', '销售费用', '管理费用', '研发费用', '财务费用', '费用率', '费用率/毛利率']
+
+        def get_value(year, code):
+            operating_cost = pure_val(self.data[code]['profit'][year]['operating_cost'][0])
+            revenue = pure_val(self.data[code]['profit'][year]['revenue'][0])
+            sales_fee = pure_val(self.data[code]['profit'][year]['sales_fee'][0])
+            manage_fee = pure_val(self.data[code]['profit'][year]['manage_fee'][0])
+            rad_cost = pure_val(self.data[code]['profit'][year]['rad_cost'][0])
+            financing_expenses = pure_val(self.data[code]['profit'][year]['financing_expenses'][0])
+            fee_rate = (sales_fee + manage_fee + rad_cost +
+                        (0 if financing_expenses < 0 else financing_expenses)) / revenue
+            fee_rate_divide_margin_rate = fee_rate / (1 - operating_cost / revenue)
+            return [format_value(revenue), format_value(sales_fee), format_value(manage_fee),
+                    format_value(rad_cost), format_value(financing_expenses),
+                    format_value_percent(fee_rate),
+                    format_value_percent(fee_rate_divide_margin_rate)]
+
+        self.write_many('15成本管控力分析', items, get_value)
 
     def step_14(self):
         log.info('竞争力分析...')
