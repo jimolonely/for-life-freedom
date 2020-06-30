@@ -173,7 +173,25 @@ class GenerateReport:
         self.step_19()
         self.step_20()
         self.step_21()
+        self.step_22()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_22(self):
+        log.info('公司类型分析...')
+        items = ['经营活动产生的现金流量净额', '投资活动产生的现金流量净额', '筹资活动产生的现金流量净额', '类型']
+
+        def ng(v):
+            return '正' if v > 0 else '负'
+
+        def get_value(year, code):
+            ncf_from_oa = pure_val(self.data[code]['cash'][year]['ncf_from_oa'][0])
+            ncf_from_ia = pure_val(self.data[code]['cash'][year]['ncf_from_ia'][0])
+            ncf_from_fa = pure_val(self.data[code]['cash'][year]['ncf_from_fa'][0])
+
+            return [format_value(ncf_from_oa), format_value(ncf_from_ia), format_value(ncf_from_fa),
+                    '{}{}{}'.format(ng(ncf_from_oa), ng(ncf_from_ia), ng(ncf_from_fa))]
+
+        self.write_one('22公司类型分析', items, get_value)
 
     def step_21(self):
         log.info('分红分析')
