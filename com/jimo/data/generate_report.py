@@ -170,7 +170,29 @@ class GenerateReport:
         self.step_16()
         self.step_17()
         self.step_18()
+        self.step_19()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_19(self):
+        log.info('造血能力分析...')
+        items = ['经营活动产生的现金流量净额', '固定资产折旧、油气资产折耗、生产性生物资产折旧', '无形资产摊销',
+                 '长期待摊费用摊销', '应付利息', '分配股利、利润或偿付利息支付的现金', '小计', '差额']
+
+        def get_value(year, code):
+            ncf_from_oa = pure_val(self.data[code]['cash'][year]['ncf_from_oa'][0])
+            # TODO 折旧和摊销
+            old = 0
+            intangible_amortize = 0
+            lt_deferred_expense = 0
+            interest_payable = pure_val(self.data[code]['asset'][year]['interest_payable'][0])
+            cash_paid_of_distribution = pure_val(self.data[code]['cash'][year]['cash_paid_of_distribution'][0])
+            sum_s = old + intangible_amortize + lt_deferred_expense + interest_payable + cash_paid_of_distribution
+            return [format_value(ncf_from_oa), format_value(old),
+                    format_value(intangible_amortize), format_value(lt_deferred_expense),
+                    format_value(interest_payable), format_value(cash_paid_of_distribution),
+                    format_value(sum_s), format_value(ncf_from_oa - sum_s)]
+
+        self.write_one('19造血能力分析', items, get_value)
 
     def step_18(self):
         log.info('获利能力(ROE)分析...')
