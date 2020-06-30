@@ -169,7 +169,23 @@ class GenerateReport:
         self.step_15()
         self.step_16()
         self.step_17()
+        self.step_18()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_18(self):
+        log.info('获利能力(ROE)分析...')
+        items = ['归属于母公司股东的综合收益总额', '增长率', '净利润', '所有者权益', '净资产收益率(ROE)']
+
+        def get_value(year, code):
+            total_compre_income_atsopc = pure_val(self.data[code]['profit'][year]['total_compre_income_atsopc'][0])
+            total_compre_income_atsopc_rate = pure_val(self.data[code]['profit'][year]['total_compre_income_atsopc'][1])
+            net_profit = pure_val(self.data[code]['profit'][year]['net_profit'][0])
+            total_holders_equity = pure_val(self.data[code]['asset'][year]['total_holders_equity'][0])
+            return [format_value(total_compre_income_atsopc), format_value_percent(total_compre_income_atsopc_rate),
+                    format_value(net_profit), format_value(total_holders_equity),
+                    format_value_percent(net_profit / total_holders_equity)]
+
+        self.write_one('18获利能力(ROE)分析', items, get_value)
 
     def step_17(self):
         log.info('净利润含金量分析...')
