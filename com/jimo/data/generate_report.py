@@ -42,6 +42,16 @@ def a_or_b(a, b):
     return x if x else 0
 
 
+def load_json(file):
+    with codecs.open(file, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def load_term_map():
+    return {'asset': load_json('资产负债表术语对应表.json'), 'profit': load_json('利润表术语对应表.json'),
+            'cash': load_json('现金流量表术语对应表.json')}
+
+
 class GenerateReport:
     """
     分为23个步骤
@@ -77,6 +87,7 @@ class GenerateReport:
         self.file_name = file_name
         self.name_map = {}
         self.data = self.init_data()
+        self.term_map = load_term_map()
         self.wb = xlwt.Workbook(encoding='utf-8')
 
     def init_data(self):
@@ -158,6 +169,7 @@ class GenerateReport:
 
     def execute_all(self):
         # TODO 23 step
+        self.step_03()
         self.step_05()
         self.step_06()
         self.step_07()
@@ -544,6 +556,33 @@ class GenerateReport:
                 sheet.write(row + 1, col, format_value_percent(self.data[code]['asset'][year]['total_assets'][1]))
                 col += 1
             row += 2
+
+    def step_03(self):
+        log.info('资产负债表异常分析...')
+        sheet = self.wb.add_sheet('03-04资产负债表异常分析', cell_overwrite_ok=True)
+        sheet.write(0, 0, '资产负债表异常')
+        # 每一年占2列：异常项目：改变率
+        col = 1
+        code = self.target
+        for year in range(self.from_year, self.end_year):
+            sheet.write_merge(0, 0, col, col + 1, str(year))
+            total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
+            sheet.col(col).width = col_width(total_assets_)
+            one_year_data = self.data[code]['asset'][year]
+            sheet.write(1, col, '异常项')
+            sheet.write(1, col + 1, '占总资产比例')
+            sheet.write(1, col + 2, '同比增长')
+            row = 2
+            for k in one_year_data.keys():
+                if one_year_data[k] is not None and isinstance(one_year_data[k], list):
+                    val = pure_val(one_year_data[k][0])
+                    rate = abs(pure_val(one_year_data[k][1]))
+                    if val / total_assets_ > 0.03 and rate > 0.3:
+                        sheet.write(row, col, self.term_map['asset'].get(k, '未知名称'))
+                        sheet.write(row, col + 1, format_value_percent(val / total_assets_))
+                        sheet.write(row, col + 2, format_value_percent(pure_val(one_year_data[k][1])))
+                        row += 1
+            col += 3
 
 
 if __name__ == '__main__':
