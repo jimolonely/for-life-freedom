@@ -98,9 +98,10 @@ class GenerateReport:
         self.name_map[code] = one_obj['name']
         return item
 
-    def write_one(self, title, items, get_value, start_row=0, code=None, sheet=None):
+    def write_one(self, title, items, get_value, start_row=0, code=None, sheet=None, extra_cols=None):
         """
         单个目标公司分析模板
+        :param extra_cols: 额外的列，{'列名':[值数组]}
         :param sheet: sheet实例
         :param code: 要处理的公司
         :param title: 分析项
@@ -132,6 +133,14 @@ class GenerateReport:
                 sheet.write(start_row + row, col, v)
                 row += 1
             col += 1
+        if extra_cols is not None:
+            row = 1
+            for k in extra_cols.keys():
+                sheet.write(start_row, col, k)
+                for v in extra_cols[k]:
+                    sheet.write(start_row + row, col, v)
+                    row += 1
+                col += 1
 
     def write_many(self, title, items, get_value):
         """
@@ -159,7 +168,32 @@ class GenerateReport:
         self.step_14()
         self.step_15()
         self.step_16()
+        self.step_17()
         self.wb.save('{}.xls'.format(self.file_name))
+
+    def step_17(self):
+        log.info('净利润含金量分析...')
+        items = ['净利润', '经营活动产生的现金流量净额', '净利润现金比率']
+
+        def get_value(year, code):
+            net_profit = pure_val(self.data[code]['profit'][year]['net_profit'][0])
+            ncf_from_oa = pure_val(self.data[code]['cash'][year]['ncf_from_oa'][0])
+            return [format_value(net_profit), format_value(ncf_from_oa), format_value_percent(net_profit / ncf_from_oa)]
+
+        # 附加的一列求和
+        # key:标题行，value：数组值
+        code1 = self.target
+        sum_net_profit = 0
+        sum_ncf_from_oa = 0
+        for year1 in range(self.from_year, self.end_year):
+            net_profit1 = pure_val(self.data[code1]['profit'][year1]['net_profit'][0])
+            ncf_from_oa1 = pure_val(self.data[code1]['cash'][year1]['ncf_from_oa'][0])
+            sum_net_profit += net_profit1
+            sum_ncf_from_oa += ncf_from_oa1
+        d_sum = {'合计': [format_value(sum_net_profit), format_value(sum_ncf_from_oa),
+                        format_value_percent(sum_net_profit / sum_ncf_from_oa)]}
+
+        self.write_one('17净利润含金量分析', items, get_value, extra_cols=d_sum)
 
     def step_16(self):
         log.info('盈利和利润质量分析...')
