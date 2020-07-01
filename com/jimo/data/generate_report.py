@@ -176,6 +176,8 @@ class GenerateReport:
         self.step_08()
         self.step_09()
         self.step_10()
+        self.step_11()
+        self.step_12()
         self.step_13()
         self.step_14()
         self.step_15()
@@ -367,9 +369,13 @@ class GenerateReport:
 
         self.write_one('13行业地位和成长能力分析', items, get_value)
 
+    def step_12(self):
+        log.info('现金流量表异常分析...')
+        self.exp_analyze('12现金流量表异常', 'cash')
+
     def step_11(self):
-        # TODO
-        pass
+        log.info('利润表异常分析...')
+        self.exp_analyze('11利润表异常', 'profit')
 
     def step_10(self):
         log.info('开始主业专注度分析...')
@@ -559,16 +565,19 @@ class GenerateReport:
 
     def step_03(self):
         log.info('资产负债表异常分析...')
-        sheet = self.wb.add_sheet('03-04资产负债表异常分析', cell_overwrite_ok=True)
-        sheet.write(0, 0, '资产负债表异常')
-        # 每一年占2列：异常项目：改变率
+        self.exp_analyze('03-04资产负债表异常', 'asset')
+
+    def exp_analyze(self, title, report_type, ):
+        sheet = self.wb.add_sheet('{}分析'.format(title), cell_overwrite_ok=True)
+        sheet.write(0, 0, title)
+        # 每一年占3列：异常项目,比例,改变率
         col = 1
         code = self.target
         for year in range(self.from_year, self.end_year):
             sheet.write_merge(0, 0, col, col + 1, str(year))
             total_assets_ = pure_val(self.data[code]['asset'][year]['total_assets'][0])
             sheet.col(col).width = col_width(total_assets_)
-            one_year_data = self.data[code]['asset'][year]
+            one_year_data = self.data[code][report_type][year]
             sheet.write(1, col, '异常项')
             sheet.write(1, col + 1, '占总资产比例')
             sheet.write(1, col + 2, '同比增长')
@@ -578,7 +587,7 @@ class GenerateReport:
                     val = pure_val(one_year_data[k][0])
                     rate = abs(pure_val(one_year_data[k][1]))
                     if val / total_assets_ > 0.03 and rate > 0.3:
-                        sheet.write(row, col, self.term_map['asset'].get(k, '未知名称'))
+                        sheet.write(row, col, self.term_map[report_type].get(k, '未知名称'))
                         sheet.write(row, col + 1, format_value_percent(val / total_assets_))
                         sheet.write(row, col + 2, format_value_percent(pure_val(one_year_data[k][1])))
                         row += 1
