@@ -229,7 +229,7 @@ class GenerateReport:
         def get_value(year, code):
             return ['']
 
-        self.write_one('21f分红分析', items, get_value)
+        self.write_one('21分红分析', items, get_value)
 
     def step_20(self):
         log.info('未来成长能力分析...')
@@ -291,7 +291,7 @@ class GenerateReport:
         def get_value(year, code):
             net_profit = pure_val(self.data[code]['profit'][year]['net_profit'][0])
             ncf_from_oa = pure_val(self.data[code]['cash'][year]['ncf_from_oa'][0])
-            return [format_value(net_profit), format_value(ncf_from_oa), format_value_percent(net_profit / ncf_from_oa)]
+            return [format_value(net_profit), format_value(ncf_from_oa), format_value_percent(ncf_from_oa / net_profit)]
 
         # 附加的一列求和
         # key:标题行，value：数组值
@@ -304,13 +304,13 @@ class GenerateReport:
             sum_net_profit += net_profit1
             sum_ncf_from_oa += ncf_from_oa1
         d_sum = {'合计': [format_value(sum_net_profit), format_value(sum_ncf_from_oa),
-                        format_value_percent(sum_net_profit / sum_ncf_from_oa)]}
+                        format_value_percent(sum_ncf_from_oa / sum_net_profit)]}
 
         self.write_one('17净利润含金量分析', items, get_value, extra_cols=d_sum)
 
     def step_16(self):
         log.info('盈利和利润质量分析...')
-        items = ['营业收入', '营业利润', '营业利润率', '利润总额', '营业利润/利润总额']
+        items = ['营业收入', '营业利润', '利润总额', '营业利润率', '营业利润/利润总额']
 
         def get_value(year, code):
             revenue = pure_val(self.data[code]['profit'][year]['revenue'][0])
