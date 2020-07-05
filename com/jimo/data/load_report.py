@@ -137,7 +137,9 @@ if __name__ == '__main__':
     # 芝加哥交易所
     r = LoadReport('CME', 2019, country='us')
     # r.write_excel()
-    r.write_json()
+    # r.write_json()
     # j = r.req_cash_flow()[0]
-    # for k in sorted(j.keys()):
-    #     print('"{}":"",'.format(k))
+    # j = r.req_profit()[0]
+    j = r.req_asset()[0]
+    for k in sorted(j.keys()):
+        print('"{}":"",'.format(k))
