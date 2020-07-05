@@ -358,12 +358,13 @@ class GenerateReport:
         sheet.write(3, 1, '持有至到期投资')
         sheet.write(4, 1, '投资性房地产')
         sheet.write(5, 1, '长期股权投资')
-        sheet.write(6, 1, '与主业无关的投资小计')
-        sheet.write(7, 1, '总资产')
-        sheet.write(8, 1, '与主业无关的投资占总资产的比率')
+        sheet.write(6, 1, '无形资产净额')
+        sheet.write(7, 1, '与主业无关的投资小计')
+        sheet.write(8, 1, '总资产')
+        sheet.write(9, 1, '与主业无关的投资占总资产的比率')
         code = self.target
         # 合并单元格
-        sheet.write_merge(1, 8, 0, 0, self.name_map[code])
+        sheet.write_merge(1, 9, 0, 0, self.name_map[code])
         col = 2
         for year in range(self.from_year, self.end_year):
             sheet.write(0, col, str(year))
@@ -374,16 +375,18 @@ class GenerateReport:
             held_to_maturity_invest = 0
             invest_property = 0
             lt_equity_invest = pure_val(self.data[code]['asset'][year]['equity_and_othr_invest'][0])
+            net_intangible_assets = pure_val(self.data[code]['asset'][year]['net_intangible_assets'][0])
             other_invest_sum = tradable_fnncl_assets + salable_financial_assets + held_to_maturity_invest \
-                               + invest_property + lt_equity_invest
+                               + invest_property + lt_equity_invest + net_intangible_assets
             sheet.write(1, col, format_value(tradable_fnncl_assets))
             sheet.write(2, col, format_value(salable_financial_assets))
             sheet.write(3, col, format_value(held_to_maturity_invest))
             sheet.write(4, col, format_value(invest_property))
             sheet.write(5, col, format_value(lt_equity_invest))
-            sheet.write(6, col, format_value(other_invest_sum))
-            sheet.write(7, col, format_value(total_assets_))
-            sheet.write(8, col, format_value_percent(other_invest_sum / total_assets_))
+            sheet.write(6, col, format_value(net_intangible_assets))
+            sheet.write(7, col, format_value(other_invest_sum))
+            sheet.write(8, col, format_value(total_assets_))
+            sheet.write(9, col, format_value_percent(other_invest_sum / total_assets_))
             col += 1
 
     def step_09(self):
@@ -391,7 +394,7 @@ class GenerateReport:
         sheet = self.wb.add_sheet('09轻重分析', cell_overwrite_ok=True)
         start_row = 0
         for code in self.codes:
-            sheet.write(start_row, 0, '行业地位分析')
+            sheet.write(start_row, 0, '轻重分析')
             sheet.write(start_row, 1, '科目名称')
             sheet.write(start_row + 1, 1, '固定资产')
             sheet.write(start_row + 2, 1, '在建工程')
