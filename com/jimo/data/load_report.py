@@ -9,21 +9,22 @@ import xlwt
 
 class LoadReport(object):
 
-    def __init__(self, code, last_year):
+    def __init__(self, code, last_year, country='cn'):
         self.code = code
         self.last_year = last_year + 1
         self.year_cnt = 6
         # 企业名
         self.name = ''
+        self.country = country
 
     def req_cash_flow(self):
-        url = 'https://stock.xueqiu.com/v5/stock/finance/cn/cash_flow.json' \
-              '?symbol={}&type=Q4&is_detail=true&count={}&timestamp='.format(self.code, self.year_cnt)
+        url = 'https://stock.xueqiu.com/v5/stock/finance/{}/cash_flow.json' \
+              '?symbol={}&type=Q4&is_detail=true&count={}&timestamp='.format(self.country, self.code, self.year_cnt)
         return self.req_data(url)
 
     def req_asset(self):
-        url = ' https://stock.xueqiu.com/v5/stock/finance/cn/balance.json?' \
-              'symbol={}&type=Q4&is_detail=true&count={}&timestamp='.format(self.code, self.year_cnt)
+        url = ' https://stock.xueqiu.com/v5/stock/finance/{}/balance.json?' \
+              'symbol={}&type=Q4&is_detail=true&count={}&timestamp='.format(self.country, self.code, self.year_cnt)
         return self.req_data(url)
 
     def req_data(self, url):
@@ -46,8 +47,8 @@ class LoadReport(object):
         return json_data['list']
 
     def req_profit(self):
-        url = 'https://stock.xueqiu.com/v5/stock/finance/cn/income.json?symbol={}&type=Q4&is_detail=true&count={}' \
-              '&timestamp='.format(self.code, self.year_cnt)
+        url = 'https://stock.xueqiu.com/v5/stock/finance/{}/income.json?symbol={}&type=Q4&is_detail=true&count={}' \
+              '&timestamp='.format(self.country, self.code, self.year_cnt)
         return self.req_data(url)
 
     def write_json(self):
@@ -125,12 +126,16 @@ class LoadReport(object):
 
 
 if __name__ == '__main__':
+    # 双汇
     # r = LoadReport('SZ000895', 2019)
     # r = LoadReport('SZ002726', 2019)
     # r = LoadReport('SZ002840', 2019)
+    # 嘉寓
     # r = LoadReport('SZ300117', 2019)
     # r = LoadReport('SZ002081', 2019)
-    r = LoadReport('SZ002375', 2019)
+    # r = LoadReport('SZ002375', 2019)
+    # 芝加哥交易所
+    r = LoadReport('CME', 2019, country='us')
     # r.write_excel()
     r.write_json()
     # j = r.req_cash_flow()[0]

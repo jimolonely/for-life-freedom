@@ -597,5 +597,6 @@ class GenerateReport:
 
 if __name__ == '__main__':
     # g = GenerateReport(['SZ000895', 'SZ002726', 'SZ002840'], 'SZ000895', 2015, 2019)
-    g = GenerateReport(['SZ300117', 'SZ002081', 'SZ002375'], 'SZ300117', 2015, 2019)
+    # g = GenerateReport(['SZ300117', 'SZ002081', 'SZ002375'], 'SZ300117', 2015, 2019)
+    g = GenerateReport(['CME'], 'CME', 2015, 2019)
     g.execute_all()
