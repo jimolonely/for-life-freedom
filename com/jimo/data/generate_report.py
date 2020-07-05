@@ -278,9 +278,10 @@ class GenerateReport:
             total_compre_income_atsopc_rate = pure_val(self.data[code]['profit'][year]['total_compre_income_atsopc'][1])
             net_profit = pure_val(self.data[code]['profit'][year]['net_profit'][0])
             total_holders_equity = pure_val(self.data[code]['asset'][year]['total_holders_equity'][0])
+            total_holders_equity_last = pure_val(self.data[code]['asset'][year - 1]['total_holders_equity'][0])
             return [format_value(total_compre_income_atsopc), format_value_percent(total_compre_income_atsopc_rate),
                     format_value(net_profit), format_value(total_holders_equity),
-                    format_value_percent(net_profit / total_holders_equity)]
+                    format_value_percent(net_profit / (total_holders_equity + total_holders_equity_last) * 2)]
 
         self.write_one('18获利能力(ROE)分析', items, get_value)
 
@@ -595,5 +596,6 @@ class GenerateReport:
 
 
 if __name__ == '__main__':
-    g = GenerateReport(['SZ000895', 'SZ002726', 'SZ002840'], 'SZ000895', 2015, 2019)
+    # g = GenerateReport(['SZ000895', 'SZ002726', 'SZ002840'], 'SZ000895', 2015, 2019)
+    g = GenerateReport(['SZ300117', 'SZ002081', 'SZ002375'], 'SZ300117', 2015, 2019)
     g.execute_all()

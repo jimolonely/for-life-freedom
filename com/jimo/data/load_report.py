@@ -119,7 +119,7 @@ class LoadReport(object):
                   'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site',
                   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                                 'Chrome/83.0.4103.61 Safari/537.36',
-                  'Cookie': 'device_id=24700f9f1986800ab4fcc880530dd0ed; s=cs1cqgondz; xq_a_token=ea139be840cf88ff8c30e6943cf26aba8ad77358; xqat=ea139be840cf88ff8c30e6943cf26aba8ad77358; xq_r_token=863970f9d67d944596be27965d13c6929b5264fe; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTU5NDAwMjgwOCwiY3RtIjoxNTkxNTMxODQyMjM1LCJjaWQiOiJkOWQwbjRBWnVwIn0.o189WRRzRJQDSnP8USNyktdNaz8yhPjm9rfvZtXHymOz8IoQm0EPetmfo4Psn7L3x5Zqroo-_p8sITOiuqvi32iIuIUkR6ZpitpaBhWywJPdV836iiIrlJ3lThIYlqrtkzgqyhhq5A6t6XYszGezYjrFdpwNgjPbrnD3OdvVb5zHTIwfR9O80_8HxM60NRygoBgam_UZqhGurrN8nzEO9nDyYGPnAHnxDRAz4kgbZWGfklLWFijqLLQaFvnN_0jSMQhO_J0QNpr4SJ2O6kkCuyanHHR28xotFJs-r_awAkNEdzkvdOu-5HdmzSwqDjLQSBlQvwE3jgBCAgCUU6BSNA; u=941591531846409; Hm_lvt_1db88642e346389874251b5a1eded6e3=1591531849; is_overseas=0; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1593244768'
+                  'Cookie': 'device_id=24700f9f1986800ab4fcc880530dd0ed; s=cs1cqgondz; Hm_lvt_1db88642e346389874251b5a1eded6e3=1591531849; xq_a_token=ad923af9f68bb6a13ada0962232589cea11925c4; xqat=ad923af9f68bb6a13ada0962232589cea11925c4; xq_r_token=cf0e6f767c2318f1f1779fcee9323365f02e1b4b; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTU5NjE2MjgxNSwiY3RtIjoxNTkzODE3NzMwOTEwLCJjaWQiOiJkOWQwbjRBWnVwIn0.h7YD9sW64SgSSmrZ6qAjMlixbhfN-o0Vzv9xsGKGnE-LmlOQd9whbIjv_DMYkjDMoAdW8lNq--rFG2LctCbMA82gnwNKjwM4rpTZ34h4LPMxXpLgSAqQpsFOnYHLeVQY0jjFdY1fRD_W1G9bDSpU_doA33LIABlNxg_Knd4eOE9gbosD5D5TKg66sn2GE6M83EBhm66hZx85tJuB4TTQgepwb-mDU9BEtituHus_4Z6eEHDw7zYRfy46SoQZ58if-HOVVWdFiLUqu_bwmsnKsnijLh6DBRlGnVVq3D-ihjLZtosfL1AilCxeYyp8Qp9PUwUowqgnikRAzJZiWP4f6A; u=121593817789811; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1593913860'
                   }
         return header
 
@@ -127,10 +127,10 @@ class LoadReport(object):
 if __name__ == '__main__':
     # r = LoadReport('SZ000895', 2019)
     # r = LoadReport('SZ002726', 2019)
-    r = LoadReport('SZ002840', 2019)
+    # r = LoadReport('SZ002840', 2019)
     # r = LoadReport('SZ300117', 2019)
     # r = LoadReport('SZ002081', 2019)
-    # r = LoadReport('SZ002375', 2019)
+    r = LoadReport('SZ002375', 2019)
     # r.write_excel()
     r.write_json()
     # j = r.req_cash_flow()[0]
