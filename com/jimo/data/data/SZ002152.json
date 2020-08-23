@@ -1,0 +1,4060 @@
+{
+  "code": "SZ002152",
+  "asset": [
+    {
+      "report_date": 1577721600000,
+      "report_name": "2019年报",
+      "ctime": null,
+      "total_assets": [
+        14187209411.66,
+        0.055578776309925526
+      ],
+      "total_liab": [
+        4275642055.52,
+        0.0877789904789187
+      ],
+      "asset_liab_ratio": [
+        0.30137301363903113,
+        0.03050479499176574
+      ],
+      "total_quity_atsopc": [
+        9052927085.91,
+        0.04212479454425289
+      ],
+      "tradable_fnncl_assets": [
+        1391850000.0,
+        null
+      ],
+      "interest_receivable": [
+        null,
+        null
+      ],
+      "saleable_finacial_assets": [
+        null,
+        null
+      ],
+      "held_to_maturity_invest": [
+        null,
+        null
+      ],
+      "fixed_asset": [
+        null,
+        null
+      ],
+      "intangible_assets": [
+        214490194.78,
+        0.4129720154817767
+      ],
+      "construction_in_process": [
+        null,
+        null
+      ],
+      "dt_assets": [
+        164185460.68,
+        0.003748126086111136
+      ],
+      "tradable_fnncl_liab": [
+        null,
+        null
+      ],
+      "payroll_payable": [
+        542776366.47,
+        0.0427039464093968
+      ],
+      "tax_payable": [
+        221369722.2,
+        0.23864324210689186
+      ],
+      "estimated_liab": [
+        null,
+        null
+      ],
+      "dt_liab": [
+        35162265.39,
+        -0.04749133925332224
+      ],
+      "bond_payable": [
+        null,
+        null
+      ],
+      "shares": [
+        2408993951.0,
+        -0.00818967059473331
+      ],
+      "capital_reserve": [
+        2008211946.49,
+        -0.12615230663284874
+      ],
+      "earned_surplus": [
+        682259502.34,
+        0.0853745891564351
+      ],
+      "undstrbtd_profit": [
+        4227900992.93,
+        0.10890804454505434
+      ],
+      "minority_equity": [
+        858640270.23,
+        0.04379668569318295
+      ],
+      "total_holders_equity": [
+        9911567356.14,
+        0.04226941875328786
+      ],
+      "total_liab_and_holders_equity": [
+        14187209411.66,
+        0.055578776309925526
+      ],
+      "lt_equity_invest": [
+        639896064.55,
+        0.021440065957267034
+      ],
+      "derivative_fnncl_liab": [
+        null,
+        null
+      ],
+      "general_risk_provision": [
+        null,
+        null
+      ],
+      "frgn_currency_convert_diff": [
+        null,
+        null
+      ],
+      "goodwill": [
+        978696782.44,
+        -0.03522260500798836
+      ],
+      "invest_property": [
+        49303525.51,
+        -0.06784919988102744
+      ],
+      "interest_payable": [
+        null,
+        null
+      ],
+      "treasury_stock": [
+        null,
+        null
+      ],
+      "othr_compre_income": [
+        -274439306.85,
+        0.2548073535007227
+      ],
+      "othr_equity_instruments": [
+        null,
+        null
+      ],
+      "currency_funds": [
+        4482916067.61,
+        0.05485628184626524
+      ],
+      "bills_receivable": [
+        53669695.02,
+        0.28144409504802353
+      ],
+      "account_receivable": [
+        1518071334.24,
+        0.15746712254473016
+      ],
+      "pre_payment": [
+        76194727.69,
+        0.1122038532302774
+      ],
+      "dividend_receivable": [
+        null,
+        null
+      ],
+      "othr_receivables": [
+        null,
+        null
+      ],
+      "inventory": [
+        1918033202.6,
+        0.028457479699995583
+      ],
+      "nca_due_within_one_year": [
+        null,
+        null
+      ],
+      "othr_current_assets": [
+        73618822.56,
+        -0.9553605515324738
+      ],
+      "current_assets_si": [
+        null,
+        null
+      ],
+      "total_current_assets": [
+        9705278758.74,
+        0.03794253427444727
+      ],
+      "lt_receivable": [
+        7787927.72,
+        null
+      ],
+      "dev_expenditure": [
+        null,
+        null
+      ],
+      "lt_deferred_expense": [
+        52640406.3,
+        1.8356702172127897
+      ],
+      "othr_noncurrent_assets": [
+        13992975.26,
+        -0.2265355530915962
+      ],
+      "noncurrent_assets_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_assets": [
+        4481930652.92,
+        0.09590123816937
+      ],
+      "st_loan": [
+        80048884.48,
+        2.4310095786721533
+      ],
+      "bill_payable": [
+        178288094.95,
+        0.6712217140602819
+      ],
+      "accounts_payable": [
+        1031804541.11,
+        0.2528661878656272
+      ],
+      "pre_receivable": [
+        1614706695.57,
+        -0.10846843438250235
+      ],
+      "dividend_payable": [
+        1485000.0,
+        -0.8997664592248606
+      ],
+      "othr_payables": [
+        null,
+        null
+      ],
+      "noncurrent_liab_due_in1y": [
+        null,
+        null
+      ],
+      "current_liab_si": [
+        null,
+        null
+      ],
+      "total_current_liab": [
+        4189362469.93,
+        0.09651413809421276
+      ],
+      "lt_loan": [
+        null,
+        null
+      ],
+      "lt_payable": [
+        null,
+        null
+      ],
+      "special_payable": [
+        null,
+        null
+      ],
+      "othr_non_current_liab": [
+        null,
+        null
+      ],
+      "noncurrent_liab_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_liab": [
+        86279585.59,
+        -0.21562417123370511
+      ],
+      "salable_financial_assets": [
+        null,
+        null
+      ],
+      "othr_current_liab": [
+        null,
+        null
+      ],
+      "ar_and_br": [
+        1571741029.26,
+        0.1613036232353381
+      ],
+      "contractual_assets": [
+        null,
+        null
+      ],
+      "bp_and_ap": [
+        1210092636.06,
+        0.30084399372858317
+      ],
+      "contract_liabilities": [
+        null,
+        null
+      ],
+      "to_sale_asset": [
+        null,
+        null
+      ],
+      "other_eq_ins_invest": [
+        1229297627.96,
+        null
+      ],
+      "other_illiquid_fnncl_assets": [
+        null,
+        null
+      ],
+      "fixed_asset_sum": [
+        1116170777.39,
+        0.024903456851566884
+      ],
+      "fixed_assets_disposal": [
+        null,
+        null
+      ],
+      "construction_in_process_sum": [
+        15468910.33,
+        -0.6796564526090069
+      ],
+      "project_goods_and_material": [
+        null,
+        null
+      ],
+      "productive_biological_assets": [
+        null,
+        null
+      ],
+      "oil_and_gas_asset": [
+        null,
+        null
+      ],
+      "to_sale_debt": [
+        null,
+        null
+      ],
+      "lt_payable_sum": [
+        0.0,
+        null
+      ],
+      "noncurrent_liab_di": [
+        51117320.2,
+        -0.2808716619999968
+      ],
+      "perpetual_bond": [
+        null,
+        null
+      ],
+      "special_reserve": [
+        null,
+        null
+      ]
+    },
+    {
+      "report_date": 1546185600000,
+      "report_name": "2018年报",
+      "ctime": null,
+      "total_assets": [
+        13440218513.35,
+        0.059017060567332066
+      ],
+      "total_liab": [
+        3930616506.61,
+        0.22564388248843004
+      ],
+      "asset_liab_ratio": [
+        0.292451830504524,
+        0.15734101755814323
+      ],
+      "total_quity_atsopc": [
+        8686989440.52,
+        -0.02293576942725009
+      ],
+      "tradable_fnncl_assets": [
+        null,
+        null
+      ],
+      "interest_receivable": [
+        null,
+        null
+      ],
+      "saleable_finacial_assets": [
+        906570668.31,
+        -0.2002249278831189
+      ],
+      "held_to_maturity_invest": [
+        null,
+        null
+      ],
+      "fixed_asset": [
+        1089049675.78,
+        0.12701141264075014
+      ],
+      "intangible_assets": [
+        151800738.04,
+        0.04190237683244861
+      ],
+      "construction_in_process": [
+        48288502.94,
+        -0.15810358007700784
+      ],
+      "dt_assets": [
+        163572370.81,
+        0.666925192856633
+      ],
+      "tradable_fnncl_liab": [
+        null,
+        null
+      ],
+      "payroll_payable": [
+        520546957.11,
+        0.20904006546228382
+      ],
+      "tax_payable": [
+        178719517.19,
+        0.049054987078526055
+      ],
+      "estimated_liab": [
+        null,
+        null
+      ],
+      "dt_liab": [
+        36915428.53,
+        -0.21230873948641718
+      ],
+      "bond_payable": [
+        null,
+        null
+      ],
+      "shares": [
+        2428885725.0,
+        0.0
+      ],
+      "capital_reserve": [
+        2298125819.56,
+        0.0
+      ],
+      "earned_surplus": [
+        628593583.41,
+        0.02197130657468965
+      ],
+      "undstrbtd_profit": [
+        3812670503.86,
+        0.04695813932950492
+      ],
+      "minority_equity": [
+        822612566.22,
+        0.3864338379108532
+      ],
+      "total_holders_equity": [
+        9509602006.74,
+        0.002674213632242018
+      ],
+      "total_liab_and_holders_equity": [
+        13440218513.35,
+        0.059017060567332066
+      ],
+      "lt_equity_invest": [
+        626464621.74,
+        -0.08781020516569077
+      ],
+      "derivative_fnncl_liab": [
+        null,
+        null
+      ],
+      "general_risk_provision": [
+        null,
+        null
+      ],
+      "frgn_currency_convert_diff": [
+        null,
+        null
+      ],
+      "goodwill": [
+        1014427563.83,
+        0.9117651942961099
+      ],
+      "invest_property": [
+        52892220.34,
+        0.037518587245974136
+      ],
+      "interest_payable": [
+        67832.81,
+        null
+      ],
+      "treasury_stock": [
+        113006514.72,
+        null
+      ],
+      "othr_compre_income": [
+        -368279676.59,
+        -2.966545698444618
+      ],
+      "othr_equity_instruments": [
+        null,
+        null
+      ],
+      "currency_funds": [
+        4249788473.33,
+        0.14817290985573767
+      ],
+      "bills_receivable": [
+        41882197.77,
+        2.3165984643086057
+      ],
+      "account_receivable": [
+        1311545965.04,
+        0.6388945406283273
+      ],
+      "pre_payment": [
+        68507879.62,
+        3.085205952414093
+      ],
+      "dividend_receivable": [
+        null,
+        null
+      ],
+      "othr_receivables": [
+        109691755.92,
+        0.1479722648739459
+      ],
+      "inventory": [
+        1864961109.68,
+        -0.03616979035688559
+      ],
+      "nca_due_within_one_year": [
+        null,
+        null
+      ],
+      "othr_current_assets": [
+        1649187547.95,
+        -0.31500721085582606
+      ],
+      "current_assets_si": [
+        null,
+        null
+      ],
+      "total_current_assets": [
+        9350497198.31,
+        0.042522531846674774
+      ],
+      "lt_receivable": [
+        null,
+        null
+      ],
+      "dev_expenditure": [
+        null,
+        null
+      ],
+      "lt_deferred_expense": [
+        18563655.95,
+        -0.037856558709640824
+      ],
+      "othr_noncurrent_assets": [
+        18091297.3,
+        -0.45859694620387775
+      ],
+      "noncurrent_assets_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_assets": [
+        4089721315.04,
+        0.09876363722564709
+      ],
+      "st_loan": [
+        23331000.0,
+        -0.3495698811924529
+      ],
+      "bill_payable": [
+        106681293.96,
+        0.5361806695619618
+      ],
+      "accounts_payable": [
+        823555261.61,
+        0.8812893883585851
+      ],
+      "pre_receivable": [
+        1811160432.05,
+        0.050073029969619966
+      ],
+      "dividend_payable": [
+        14815400.0,
+        15.315314502977028
+      ],
+      "othr_payables": [
+        341741050.06,
+        0.5511801995048473
+      ],
+      "noncurrent_liab_due_in1y": [
+        null,
+        null
+      ],
+      "current_liab_si": [
+        null,
+        null
+      ],
+      "total_current_liab": [
+        3820618744.79,
+        0.23644692117513735
+      ],
+      "lt_loan": [
+        2000000.0,
+        null
+      ],
+      "lt_payable": [
+        null,
+        null
+      ],
+      "special_payable": [
+        null,
+        null
+      ],
+      "othr_non_current_liab": [
+        null,
+        null
+      ],
+      "noncurrent_liab_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_liab": [
+        109997761.82,
+        -0.05970916275035801
+      ],
+      "salable_financial_assets": [
+        null,
+        null
+      ],
+      "othr_current_liab": [
+        null,
+        null
+      ],
+      "ar_and_br": [
+        1353428162.81,
+        0.66495726247321
+      ],
+      "contractual_assets": [
+        null,
+        null
+      ],
+      "bp_and_ap": [
+        930236555.57,
+        0.8340377598332194
+      ],
+      "contract_liabilities": [
+        null,
+        null
+      ],
+      "to_sale_asset": [
+        54932269.0,
+        null
+      ],
+      "other_eq_ins_invest": [
+        null,
+        null
+      ],
+      "other_illiquid_fnncl_assets": [
+        null,
+        null
+      ],
+      "fixed_asset_sum": [
+        1089049675.78,
+        0.12701141264075014
+      ],
+      "fixed_assets_disposal": [
+        null,
+        null
+      ],
+      "construction_in_process_sum": [
+        48288502.94,
+        -0.15810358007700784
+      ],
+      "project_goods_and_material": [
+        null,
+        null
+      ],
+      "productive_biological_assets": [
+        null,
+        null
+      ],
+      "oil_and_gas_asset": [
+        null,
+        null
+      ],
+      "to_sale_debt": [
+        null,
+        null
+      ],
+      "lt_payable_sum": [
+        0.0,
+        null
+      ],
+      "noncurrent_liab_di": [
+        71082333.29,
+        0.013762425282307448
+      ],
+      "perpetual_bond": [
+        null,
+        null
+      ],
+      "special_reserve": [
+        null,
+        null
+      ]
+    },
+    {
+      "report_date": 1514649600000,
+      "report_name": "2017年报",
+      "ctime": null,
+      "total_assets": [
+        12691220013.16,
+        0.065902179970473
+      ],
+      "total_liab": [
+        3206980887.98,
+        0.05607276499670422
+      ],
+      "asset_liab_ratio": [
+        0.25269287622896475,
+        -0.009221685777996159
+      ],
+      "total_quity_atsopc": [
+        8890909285.9,
+        0.06153056722005657
+      ],
+      "tradable_fnncl_assets": [
+        null,
+        null
+      ],
+      "interest_receivable": [
+        null,
+        null
+      ],
+      "saleable_finacial_assets": [
+        1133532039.09,
+        -0.44317953462687426
+      ],
+      "held_to_maturity_invest": [
+        null,
+        null
+      ],
+      "fixed_asset": [
+        966316457.46,
+        0.2970028687260441
+      ],
+      "intangible_assets": [
+        145695740.23,
+        0.2935134389904296
+      ],
+      "construction_in_process": [
+        57356821.81,
+        -0.563881463233903
+      ],
+      "dt_assets": [
+        98128201.26,
+        0.29392752313818615
+      ],
+      "tradable_fnncl_liab": [
+        null,
+        null
+      ],
+      "payroll_payable": [
+        430545663.44,
+        0.17225071033085934
+      ],
+      "tax_payable": [
+        170362392.24,
+        -0.2835244374160143
+      ],
+      "estimated_liab": [
+        null,
+        null
+      ],
+      "dt_liab": [
+        46865352.43,
+        0.6442037909922973
+      ],
+      "bond_payable": [
+        null,
+        null
+      ],
+      "shares": [
+        2428885725.0,
+        0.5
+      ],
+      "capital_reserve": [
+        2298125819.56,
+        -0.260518841648884
+      ],
+      "earned_surplus": [
+        615079483.51,
+        0.1413959025253291
+      ],
+      "undstrbtd_profit": [
+        3641664705.24,
+        0.2219115877432708
+      ],
+      "minority_equity": [
+        593329839.28,
+        0.2003648437311692
+      ],
+      "total_holders_equity": [
+        9484239125.18,
+        0.06926740439235515
+      ],
+      "total_liab_and_holders_equity": [
+        12691220013.16,
+        0.065902179970473
+      ],
+      "lt_equity_invest": [
+        686770039.84,
+        5.7475220092348955
+      ],
+      "derivative_fnncl_liab": [
+        null,
+        null
+      ],
+      "general_risk_provision": [
+        null,
+        null
+      ],
+      "frgn_currency_convert_diff": [
+        null,
+        null
+      ],
+      "goodwill": [
+        530623513.21,
+        0.3152677446198835
+      ],
+      "invest_property": [
+        50979540.02,
+        0.20448216220412244
+      ],
+      "interest_payable": [
+        null,
+        null
+      ],
+      "treasury_stock": [
+        null,
+        null
+      ],
+      "othr_compre_income": [
+        -92846447.41,
+        -1.7177361929319999
+      ],
+      "othr_equity_instruments": [
+        null,
+        null
+      ],
+      "currency_funds": [
+        3701348844.63,
+        0.15283221694643556
+      ],
+      "bills_receivable": [
+        12628058.0,
+        -0.3929155726449475
+      ],
+      "account_receivable": [
+        800262574.88,
+        0.05726475729388545
+      ],
+      "pre_payment": [
+        16769749.29,
+        -0.2882214751013756
+      ],
+      "dividend_receivable": [
+        null,
+        null
+      ],
+      "othr_receivables": [
+        95552618.54,
+        0.10474549671473385
+      ],
+      "inventory": [
+        1934947764.68,
+        0.004308205920105844
+      ],
+      "nca_due_within_one_year": [
+        null,
+        null
+      ],
+      "othr_current_assets": [
+        2407598407.0,
+        0.13425079887312347
+      ],
+      "current_assets_si": [
+        null,
+        null
+      ],
+      "total_current_assets": [
+        8969108017.02,
+        0.10078704829223581
+      ],
+      "lt_receivable": [
+        null,
+        null
+      ],
+      "dev_expenditure": [
+        null,
+        null
+      ],
+      "lt_deferred_expense": [
+        19294062.77,
+        -0.17767096016584855
+      ],
+      "othr_noncurrent_assets": [
+        33415580.45,
+        -0.6154470965438926
+      ],
+      "noncurrent_assets_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_assets": [
+        3722111996.14,
+        -0.00972038986648657
+      ],
+      "st_loan": [
+        35870110.14,
+        8.264949101219914
+      ],
+      "bill_payable": [
+        69445798.97,
+        -0.36726844462852687
+      ],
+      "accounts_payable": [
+        437761073.18,
+        -0.1388126210790196
+      ],
+      "pre_receivable": [
+        1724794733.66,
+        0.1793955579377122
+      ],
+      "dividend_payable": [
+        908067.08,
+        2.2079572092947015
+      ],
+      "othr_payables": [
+        220310348.32,
+        -0.060053744561448005
+      ],
+      "noncurrent_liab_due_in1y": [
+        null,
+        null
+      ],
+      "current_liab_si": [
+        null,
+        null
+      ],
+      "total_current_liab": [
+        3089998187.03,
+        0.05672822578724946
+      ],
+      "lt_loan": [
+        null,
+        null
+      ],
+      "lt_payable": [
+        null,
+        null
+      ],
+      "special_payable": [
+        null,
+        null
+      ],
+      "othr_non_current_liab": [
+        null,
+        null
+      ],
+      "noncurrent_liab_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_liab": [
+        116982700.95,
+        0.03904898445152129
+      ],
+      "salable_financial_assets": [
+        null,
+        null
+      ],
+      "othr_current_liab": [
+        null,
+        null
+      ],
+      "ar_and_br": [
+        812890632.88,
+        null
+      ],
+      "contractual_assets": [
+        null,
+        null
+      ],
+      "bp_and_ap": [
+        507206872.15,
+        null
+      ],
+      "contract_liabilities": [
+        null,
+        null
+      ],
+      "to_sale_asset": [
+        null,
+        null
+      ],
+      "other_eq_ins_invest": [
+        null,
+        null
+      ],
+      "other_illiquid_fnncl_assets": [
+        null,
+        null
+      ],
+      "fixed_asset_sum": [
+        966316457.46,
+        null
+      ],
+      "fixed_assets_disposal": [
+        null,
+        null
+      ],
+      "construction_in_process_sum": [
+        57356821.81,
+        null
+      ],
+      "project_goods_and_material": [
+        null,
+        null
+      ],
+      "productive_biological_assets": [
+        null,
+        null
+      ],
+      "oil_and_gas_asset": [
+        null,
+        null
+      ],
+      "to_sale_debt": [
+        null,
+        null
+      ],
+      "lt_payable_sum": [
+        0.0,
+        null
+      ],
+      "noncurrent_liab_di": [
+        70117348.52,
+        -0.09335315430349103
+      ],
+      "perpetual_bond": [
+        null,
+        null
+      ],
+      "special_reserve": [
+        null,
+        null
+      ]
+    },
+    {
+      "report_date": 1483113600000,
+      "report_name": "2016年报",
+      "ctime": null,
+      "total_assets": [
+        11906552263.09,
+        0.54626971662057
+      ],
+      "total_liab": [
+        3036704471.77,
+        0.033959071552032594
+      ],
+      "asset_liab_ratio": [
+        0.25504481941289625,
+        -0.331320363816095
+      ],
+      "total_quity_atsopc": [
+        8375556541.14,
+        0.857126999468359
+      ],
+      "tradable_fnncl_assets": [
+        null,
+        null
+      ],
+      "interest_receivable": [
+        194917.81,
+        -0.8660714281419893
+      ],
+      "saleable_finacial_assets": [
+        2035722660.32,
+        379.1306500532418
+      ],
+      "held_to_maturity_invest": [
+        null,
+        null
+      ],
+      "fixed_asset": [
+        745038026.33,
+        0.28885261563037073
+      ],
+      "intangible_assets": [
+        112635660.24,
+        0.13678772025378858
+      ],
+      "construction_in_process": [
+        131516587.75,
+        1.1817079575408658
+      ],
+      "dt_assets": [
+        75837478.92,
+        -0.10091133429621323
+      ],
+      "tradable_fnncl_liab": [
+        null,
+        null
+      ],
+      "payroll_payable": [
+        367281213.52,
+        -0.005568901939418642
+      ],
+      "tax_payable": [
+        237778371.15,
+        -0.025489837065122343
+      ],
+      "estimated_liab": [
+        null,
+        null
+      ],
+      "dt_liab": [
+        28503372.08,
+        6.109027113993745
+      ],
+      "bond_payable": [
+        null,
+        null
+      ],
+      "shares": [
+        1619257150.0,
+        0.80582653970746
+      ],
+      "capital_reserve": [
+        3107754394.56,
+        16.173032155208034
+      ],
+      "earned_surplus": [
+        538883556.66,
+        0.14662491646733664
+      ],
+      "undstrbtd_profit": [
+        2980301309.66,
+        0.006555102697139159
+      ],
+      "minority_equity": [
+        494291250.18,
+        0.9517393622816739
+      ],
+      "total_holders_equity": [
+        8869847791.32,
+        0.8621574771693752
+      ],
+      "total_liab_and_holders_equity": [
+        11906552263.09,
+        0.54626971662057
+      ],
+      "lt_equity_invest": [
+        101781074.43,
+        0.5435637470724108
+      ],
+      "derivative_fnncl_liab": [
+        null,
+        null
+      ],
+      "general_risk_provision": [
+        null,
+        null
+      ],
+      "frgn_currency_convert_diff": [
+        null,
+        null
+      ],
+      "goodwill": [
+        403433837.24,
+        0.728352493773595
+      ],
+      "invest_property": [
+        42324860.94,
+        0.16579669375247436
+      ],
+      "interest_payable": [
+        null,
+        null
+      ],
+      "treasury_stock": [
+        null,
+        null
+      ],
+      "othr_compre_income": [
+        129360130.26,
+        89.1080110601203
+      ],
+      "othr_equity_instruments": [
+        null,
+        null
+      ],
+      "currency_funds": [
+        3210657015.15,
+        0.28700425310912137
+      ],
+      "bills_receivable": [
+        20801156.2,
+        1.5796066640929904
+      ],
+      "account_receivable": [
+        756917857.48,
+        -0.046340626303077934
+      ],
+      "pre_payment": [
+        23560347.36,
+        -0.06752128990762687
+      ],
+      "dividend_receivable": [
+        null,
+        null
+      ],
+      "othr_receivables": [
+        86492878.97,
+        0.19248484323489287
+      ],
+      "inventory": [
+        1926647371.07,
+        -0.10116670294282995
+      ],
+      "nca_due_within_one_year": [
+        null,
+        null
+      ],
+      "othr_current_assets": [
+        2122633203.69,
+        1.4747706754424807
+      ],
+      "current_assets_si": [
+        null,
+        null
+      ],
+      "total_current_assets": [
+        8147904747.73,
+        0.2737276330032065
+      ],
+      "lt_receivable": [
+        null,
+        null
+      ],
+      "dev_expenditure": [
+        null,
+        null
+      ],
+      "lt_deferred_expense": [
+        23462703.9,
+        2.878791161388558
+      ],
+      "othr_noncurrent_assets": [
+        86894625.29,
+        -0.3536302952566613
+      ],
+      "noncurrent_assets_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_assets": [
+        3758647515.36,
+        1.8839887516897948
+      ],
+      "st_loan": [
+        3871592.79,
+        -0.22568144199999998
+      ],
+      "bill_payable": [
+        109755548.59,
+        0.5373591357434976
+      ],
+      "accounts_payable": [
+        508322676.22,
+        0.12806482094484634
+      ],
+      "pre_receivable": [
+        1462439570.89,
+        -0.0538478092631128
+      ],
+      "dividend_payable": [
+        283067.08,
+        -0.8703351433433736
+      ],
+      "othr_payables": [
+        234386112.02,
+        0.32359586806372476
+      ],
+      "noncurrent_liab_due_in1y": [
+        null,
+        null
+      ],
+      "current_liab_si": [
+        null,
+        null
+      ],
+      "total_current_liab": [
+        2924118152.26,
+        0.020535103534552884
+      ],
+      "lt_loan": [
+        6745945.87,
+        null
+      ],
+      "lt_payable": [
+        null,
+        null
+      ],
+      "special_payable": [
+        null,
+        null
+      ],
+      "othr_non_current_liab": [
+        null,
+        null
+      ],
+      "noncurrent_liab_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_liab": [
+        112586319.51,
+        0.5704950083733005
+      ],
+      "salable_financial_assets": [
+        null,
+        null
+      ],
+      "othr_current_liab": [
+        null,
+        null
+      ],
+      "ar_and_br": [
+        null,
+        null
+      ],
+      "contractual_assets": [
+        null,
+        null
+      ],
+      "bp_and_ap": [
+        null,
+        null
+      ],
+      "contract_liabilities": [
+        null,
+        null
+      ],
+      "to_sale_asset": [
+        null,
+        null
+      ],
+      "other_eq_ins_invest": [
+        null,
+        null
+      ],
+      "other_illiquid_fnncl_assets": [
+        null,
+        null
+      ],
+      "fixed_asset_sum": [
+        null,
+        null
+      ],
+      "fixed_assets_disposal": [
+        null,
+        null
+      ],
+      "construction_in_process_sum": [
+        null,
+        null
+      ],
+      "project_goods_and_material": [
+        null,
+        null
+      ],
+      "productive_biological_assets": [
+        null,
+        null
+      ],
+      "oil_and_gas_asset": [
+        null,
+        null
+      ],
+      "to_sale_debt": [
+        null,
+        null
+      ],
+      "lt_payable_sum": [
+        null,
+        null
+      ],
+      "noncurrent_liab_di": [
+        77337001.56,
+        0.14270363384415857
+      ],
+      "perpetual_bond": [
+        null,
+        null
+      ],
+      "special_reserve": [
+        null,
+        null
+      ]
+    },
+    {
+      "report_date": 1451491200000,
+      "report_name": "2015年报",
+      "ctime": null,
+      "total_assets": [
+        7700178135.23,
+        0.15891262060160932
+      ],
+      "total_liab": [
+        2936967773.02,
+        0.2674204524256506
+      ],
+      "asset_liab_ratio": [
+        0.3814155622689727,
+        0.09362900178592694
+      ],
+      "total_quity_atsopc": [
+        4509953569.97,
+        0.08744761724315452
+      ],
+      "tradable_fnncl_assets": [
+        null,
+        null
+      ],
+      "interest_receivable": [
+        1455386.31,
+        -0.024124271868929258
+      ],
+      "saleable_finacial_assets": [
+        5355323.65,
+        0.11532097640289846
+      ],
+      "held_to_maturity_invest": [
+        null,
+        null
+      ],
+      "fixed_asset": [
+        578063013.02,
+        0.06318710222311716
+      ],
+      "intangible_assets": [
+        99082404.07,
+        0.16202794857875288
+      ],
+      "construction_in_process": [
+        60281481.44,
+        15.77245820366067
+      ],
+      "dt_assets": [
+        84349277.01,
+        0.608599465318352
+      ],
+      "tradable_fnncl_liab": [
+        null,
+        null
+      ],
+      "payroll_payable": [
+        369338020.74,
+        0.3717905726888264
+      ],
+      "tax_payable": [
+        243997836.24,
+        0.25593639675916613
+      ],
+      "estimated_liab": [
+        null,
+        null
+      ],
+      "dt_liab": [
+        4009461.72,
+        null
+      ],
+      "bond_payable": [
+        null,
+        null
+      ],
+      "shares": [
+        896684767.0,
+        0.0
+      ],
+      "capital_reserve": [
+        180967133.03,
+        -0.00035481889842870027
+      ],
+      "earned_surplus": [
+        469973701.88,
+        0.17423730745856505
+      ],
+      "undstrbtd_profit": [
+        2960892356.19,
+        0.10887601454380992
+      ],
+      "minority_equity": [
+        253256792.24,
+        0.4089415939509952
+      ],
+      "total_holders_equity": [
+        4763210362.21,
+        0.10080282739997637
+      ],
+      "total_liab_and_holders_equity": [
+        7700178135.23,
+        0.15891262060160932
+      ],
+      "lt_equity_invest": [
+        65939015.88,
+        0.0010062275703742107
+      ],
+      "derivative_fnncl_liab": [
+        null,
+        null
+      ],
+      "general_risk_provision": [
+        null,
+        null
+      ],
+      "frgn_currency_convert_diff": [
+        null,
+        null
+      ],
+      "goodwill": [
+        233421040.38,
+        228.77340820436248
+      ],
+      "invest_property": [
+        36305524.94,
+        0.07420251249751736
+      ],
+      "interest_payable": [
+        null,
+        null
+      ],
+      "treasury_stock": [
+        null,
+        null
+      ],
+      "othr_compre_income": [
+        1435611.87,
+        2.7000645429448724
+      ],
+      "othr_equity_instruments": [
+        null,
+        null
+      ],
+      "currency_funds": [
+        2494674751.38,
+        0.0011558406221740445
+      ],
+      "bills_receivable": [
+        8063693.0,
+        -0.651155638528454
+      ],
+      "account_receivable": [
+        793698335.44,
+        0.3204792963333368
+      ],
+      "pre_payment": [
+        25266364.91,
+        -0.21050850935876322
+      ],
+      "dividend_receivable": [
+        null,
+        null
+      ],
+      "othr_receivables": [
+        72531638.0,
+        0.005563412572136742
+      ],
+      "inventory": [
+        2143497996.1,
+        0.20047739216431493
+      ],
+      "nca_due_within_one_year": [
+        null,
+        null
+      ],
+      "othr_current_assets": [
+        857709049.47,
+        0.016951269796046633
+      ],
+      "current_assets_si": [
+        null,
+        null
+      ],
+      "total_current_assets": [
+        6396897214.61,
+        0.09338322676347381
+      ],
+      "lt_receivable": [
+        null,
+        null
+      ],
+      "dev_expenditure": [
+        null,
+        null
+      ],
+      "lt_deferred_expense": [
+        6048973.23,
+        0.8518719181667986
+      ],
+      "othr_noncurrent_assets": [
+        134434867.0,
+        null
+      ],
+      "noncurrent_assets_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_assets": [
+        1303280920.62,
+        0.6419094516967299
+      ],
+      "st_loan": [
+        5000000.0,
+        null
+      ],
+      "bill_payable": [
+        71392263.55,
+        -0.35030858251365893
+      ],
+      "accounts_payable": [
+        450614775.66,
+        0.020949378176176963
+      ],
+      "pre_receivable": [
+        1545670543.5,
+        0.3534269474463405
+      ],
+      "dividend_payable": [
+        2183067.08,
+        null
+      ],
+      "othr_payables": [
+        177082837.5,
+        0.4441219386962274
+      ],
+      "noncurrent_liab_due_in1y": [
+        null,
+        null
+      ],
+      "current_liab_si": [
+        null,
+        null
+      ],
+      "total_current_liab": [
+        2865279344.27,
+        0.25701372414448853
+      ],
+      "lt_loan": [
+        null,
+        null
+      ],
+      "lt_payable": [
+        null,
+        null
+      ],
+      "special_payable": [
+        null,
+        null
+      ],
+      "othr_non_current_liab": [
+        null,
+        null
+      ],
+      "noncurrent_liab_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_liab": [
+        71688428.75,
+        0.8942067272963644
+      ],
+      "salable_financial_assets": [
+        null,
+        null
+      ],
+      "othr_current_liab": [
+        null,
+        null
+      ],
+      "ar_and_br": [
+        null,
+        null
+      ],
+      "contractual_assets": [
+        null,
+        null
+      ],
+      "bp_and_ap": [
+        null,
+        null
+      ],
+      "contract_liabilities": [
+        null,
+        null
+      ],
+      "to_sale_asset": [
+        null,
+        null
+      ],
+      "other_eq_ins_invest": [
+        null,
+        null
+      ],
+      "other_illiquid_fnncl_assets": [
+        null,
+        null
+      ],
+      "fixed_asset_sum": [
+        null,
+        null
+      ],
+      "fixed_assets_disposal": [
+        null,
+        null
+      ],
+      "construction_in_process_sum": [
+        null,
+        null
+      ],
+      "project_goods_and_material": [
+        null,
+        null
+      ],
+      "productive_biological_assets": [
+        null,
+        null
+      ],
+      "oil_and_gas_asset": [
+        null,
+        null
+      ],
+      "to_sale_debt": [
+        null,
+        null
+      ],
+      "lt_payable_sum": [
+        null,
+        null
+      ],
+      "noncurrent_liab_di": [
+        67678967.03,
+        0.7882656501199274
+      ],
+      "perpetual_bond": [
+        null,
+        null
+      ],
+      "special_reserve": [
+        null,
+        null
+      ]
+    },
+    {
+      "report_date": 1419955200000,
+      "report_name": "2014年报",
+      "ctime": null,
+      "total_assets": [
+        6644312951.94,
+        0.3132797624836632
+      ],
+      "total_liab": [
+        2317279768.84,
+        0.6107411970530385
+      ],
+      "asset_liab_ratio": [
+        0.34876138219278235,
+        0.22650271714141001
+      ],
+      "total_quity_atsopc": [
+        4147283509.07,
+        0.18989877009468367
+      ],
+      "tradable_fnncl_assets": [
+        null,
+        null
+      ],
+      "interest_receivable": [
+        1491364.39,
+        null
+      ],
+      "saleable_finacial_assets": [
+        4801598.61,
+        -0.11545166818299614
+      ],
+      "held_to_maturity_invest": [
+        null,
+        null
+      ],
+      "fixed_asset": [
+        543707699.06,
+        0.3969379508139721
+      ],
+      "intangible_assets": [
+        85266799.47,
+        3.952062549995487
+      ],
+      "construction_in_process": [
+        3594075.52,
+        -0.9271291027290804
+      ],
+      "dt_assets": [
+        52436469.63,
+        0.46466537927244883
+      ],
+      "tradable_fnncl_liab": [
+        null,
+        null
+      ],
+      "payroll_payable": [
+        269237905.62,
+        0.6301571822636174
+      ],
+      "tax_payable": [
+        194275631.21,
+        0.12420979403482155
+      ],
+      "estimated_liab": [
+        null,
+        null
+      ],
+      "dt_liab": [
+        null,
+        null
+      ],
+      "bond_payable": [
+        null,
+        null
+      ],
+      "shares": [
+        896684767.0,
+        0.19999999973234742
+      ],
+      "capital_reserve": [
+        181031366.38,
+        0.006140517042340751
+      ],
+      "earned_surplus": [
+        400237412.74,
+        0.24760446296945982
+      ],
+      "undstrbtd_profit": [
+        2670174408.46,
+        0.19147997749247733
+      ],
+      "minority_equity": [
+        179749674.03,
+        0.3287494691186243
+      ],
+      "total_holders_equity": [
+        4327033183.1,
+        0.19508655801809613
+      ],
+      "total_liab_and_holders_equity": [
+        6644312951.94,
+        0.3132797624836632
+      ],
+      "lt_equity_invest": [
+        65872732.92,
+        0.01791367955753119
+      ],
+      "derivative_fnncl_liab": [
+        null,
+        null
+      ],
+      "general_risk_provision": [
+        null,
+        null
+      ],
+      "frgn_currency_convert_diff": [
+        null,
+        null
+      ],
+      "goodwill": [
+        1015874.91,
+        0.07289666399155806
+      ],
+      "invest_property": [
+        33797654.09,
+        0.011810320115665952
+      ],
+      "interest_payable": [
+        null,
+        null
+      ],
+      "treasury_stock": [
+        null,
+        null
+      ],
+      "othr_compre_income": [
+        -844445.51,
+        0.7665188140012847
+      ],
+      "othr_equity_instruments": [
+        null,
+        null
+      ],
+      "currency_funds": [
+        2491794633.92,
+        0.5148835074233208
+      ],
+      "bills_receivable": [
+        23115446.0,
+        null
+      ],
+      "account_receivable": [
+        601068367.86,
+        -0.15803402394871474
+      ],
+      "pre_payment": [
+        32003340.39,
+        -0.753779403337373
+      ],
+      "dividend_receivable": [
+        null,
+        null
+      ],
+      "othr_receivables": [
+        72130347.12,
+        0.43525851839277024
+      ],
+      "inventory": [
+        1785537995.21,
+        0.5250027479650872
+      ],
+      "nca_due_within_one_year": [
+        null,
+        null
+      ],
+      "othr_current_assets": [
+        843412142.69,
+        0.12341042196707781
+      ],
+      "current_assets_si": [
+        null,
+        null
+      ],
+      "total_current_assets": [
+        5850553637.58,
+        0.3116070387501513
+      ],
+      "lt_receivable": [
+        null,
+        null
+      ],
+      "dev_expenditure": [
+        null,
+        null
+      ],
+      "lt_deferred_expense": [
+        3266410.15,
+        0.2178198471470083
+      ],
+      "othr_noncurrent_assets": [
+        null,
+        null
+      ],
+      "noncurrent_assets_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_assets": [
+        793759314.36,
+        0.3257417567316077
+      ],
+      "st_loan": [
+        null,
+        null
+      ],
+      "bill_payable": [
+        109886419.35,
+        0.4007718147524926
+      ],
+      "accounts_payable": [
+        441368382.5,
+        0.10734846520944902
+      ],
+      "pre_receivable": [
+        1142042092.79,
+        1.373548936629503
+      ],
+      "dividend_payable": [
+        null,
+        null
+      ],
+      "othr_payables": [
+        122623189.05,
+        0.2777718378817738
+      ],
+      "noncurrent_liab_due_in1y": [
+        null,
+        null
+      ],
+      "current_liab_si": [
+        null,
+        null
+      ],
+      "total_current_liab": [
+        2279433620.52,
+        0.6373828796069199
+      ],
+      "lt_loan": [
+        null,
+        null
+      ],
+      "lt_payable": [
+        null,
+        null
+      ],
+      "special_payable": [
+        null,
+        null
+      ],
+      "othr_non_current_liab": [
+        null,
+        null
+      ],
+      "noncurrent_liab_si": [
+        null,
+        null
+      ],
+      "total_noncurrent_liab": [
+        37846148.32,
+        -0.1864856215962965
+      ],
+      "salable_financial_assets": [
+        null,
+        null
+      ],
+      "othr_current_liab": [
+        null,
+        null
+      ],
+      "ar_and_br": [
+        null,
+        null
+      ],
+      "contractual_assets": [
+        null,
+        null
+      ],
+      "bp_and_ap": [
+        null,
+        null
+      ],
+      "contract_liabilities": [
+        null,
+        null
+      ],
+      "to_sale_asset": [
+        null,
+        null
+      ],
+      "other_eq_ins_invest": [
+        null,
+        null
+      ],
+      "other_illiquid_fnncl_assets": [
+        null,
+        null
+      ],
+      "fixed_asset_sum": [
+        null,
+        null
+      ],
+      "fixed_assets_disposal": [
+        null,
+        null
+      ],
+      "construction_in_process_sum": [
+        null,
+        null
+      ],
+      "project_goods_and_material": [
+        null,
+        null
+      ],
+      "productive_biological_assets": [
+        null,
+        null
+      ],
+      "oil_and_gas_asset": [
+        null,
+        null
+      ],
+      "to_sale_debt": [
+        null,
+        null
+      ],
+      "lt_payable_sum": [
+        null,
+        null
+      ],
+      "noncurrent_liab_di": [
+        37846148.32,
+        -0.1864856215962965
+      ],
+      "perpetual_bond": [
+        null,
+        null
+      ],
+      "special_reserve": [
+        null,
+        null
+      ]
+    }
+  ],
+  "cash": [
+    {
+      "report_date": 1577721600000,
+      "report_name": "2019年报",
+      "ctime": null,
+      "ncf_from_oa": [
+        928652454.29,
+        -0.0395904596519042
+      ],
+      "ncf_from_ia": [
+        -266698967.16,
+        -3.6317869504087894
+      ],
+      "ncf_from_fa": [
+        -456586871.91,
+        0.1661378199810292
+      ],
+      "cash_received_of_othr_oa": [
+        499541629.35,
+        0.15235667009140974
+      ],
+      "sub_total_of_ci_from_oa": [
+        7211073604.26,
+        0.12236436809511723
+      ],
+      "cash_paid_to_employee_etc": [
+        2335647106.86,
+        0.13228708163420458
+      ],
+      "payments_of_all_taxes": [
+        479243183.83,
+        0.0053286935850327365
+      ],
+      "othrcash_paid_relating_to_oa": [
+        873969133.45,
+        0.017204093690237628
+      ],
+      "sub_total_of_cos_from_oa": [
+        6282421149.97,
+        0.15105632520921286
+      ],
+      "cash_received_of_dspsl_invest": [
+        6215741416.77,
+        -0.33171264633466613
+      ],
+      "invest_income_cash_received": [
+        60299228.38,
+        -0.3503438358566453
+      ],
+      "net_cash_of_disposal_assets": [
+        813519.06,
+        0.7322357582575246
+      ],
+      "net_cash_of_disposal_branch": [
+        -670876.37,
+        null
+      ],
+      "cash_received_of_othr_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_ia": [
+        6276183287.84,
+        -0.33191495037589863
+      ],
+      "invest_paid_cash": [
+        6293325081.97,
+        -0.270739578531829
+      ],
+      "cash_paid_for_assets": [
+        249557173.03,
+        0.7200021333395864
+      ],
+      "othrcash_paid_relating_to_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_ia": [
+        6542882255.0,
+        -0.29593056535333456
+      ],
+      "cash_received_of_absorb_invest": [
+        21000000.0,
+        -0.4450317124735729
+      ],
+      "cash_received_from_investor": [
+        21000000.0,
+        -0.4450317124735729
+      ],
+      "cash_received_from_bond_issue": [
+        null,
+        null
+      ],
+      "cash_received_of_borrowing": [
+        129611027.2,
+        -0.4706433132079732
+      ],
+      "cash_received_of_othr_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_fa": [
+        150611027.2,
+        -0.46721497952171737
+      ],
+      "cash_pay_for_debt": [
+        75940000.0,
+        -0.5775723096142199
+      ],
+      "cash_paid_of_distribution": [
+        347512977.39,
+        -0.35342348854661826
+      ],
+      "branch_paid_to_minority_holder": [
+        53034458.01,
+        0.07836586326590468
+      ],
+      "othrcash_paid_relating_to_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_fa": [
+        607197899.11,
+        -0.2686504370057607
+      ],
+      "effect_of_exchange_chg_on_cce": [
+        12601701.05,
+        0.03574726493893383
+      ],
+      "net_increase_in_cce": [
+        217968316.27,
+        -0.5909628145319724
+      ],
+      "initial_balance_of_cce": [
+        4234069111.22,
+        0.14397578955261967
+      ],
+      "final_balance_of_cce": [
+        4452037427.49,
+        0.05147963118797436
+      ],
+      "cash_received_of_sales_service": [
+        6606654750.19,
+        0.12379351778056158
+      ],
+      "refund_of_tax_and_levies": [
+        104877224.72,
+        -0.06786560319512897
+      ],
+      "goods_buy_and_service_cash_pay": [
+        2593561725.83,
+        0.2594375322320295
+      ],
+      "net_cash_amt_from_branch": [
+        null,
+        null
+      ]
+    },
+    {
+      "report_date": 1546185600000,
+      "report_name": "2018年报",
+      "ctime": null,
+      "ncf_from_oa": [
+        966933808.21,
+        0.43792641306046964
+      ],
+      "ncf_from_ia": [
+        101337597.68,
+        23.79557939196759
+      ],
+      "ncf_from_fa": [
+        -547556758.0,
+        -2.3371151160156374
+      ],
+      "cash_received_of_othr_oa": [
+        433495672.23,
+        0.6174268312728565
+      ],
+      "sub_total_of_ci_from_oa": [
+        6424895345.26,
+        0.19653909660413132
+      ],
+      "cash_paid_to_employee_etc": [
+        2062769367.19,
+        0.17329639705120775
+      ],
+      "payments_of_all_taxes": [
+        476702979.72,
+        0.031846228729506154
+      ],
+      "othrcash_paid_relating_to_oa": [
+        859187589.66,
+        0.2380412771297667
+      ],
+      "sub_total_of_cos_from_oa": [
+        5457961537.05,
+        0.1619815198756464
+      ],
+      "cash_received_of_dspsl_invest": [
+        9301001107.8,
+        -0.04073234955786718
+      ],
+      "invest_income_cash_received": [
+        92817141.91,
+        -0.6051739391643071
+      ],
+      "net_cash_of_disposal_assets": [
+        469635.3,
+        -0.9444189081779363
+      ],
+      "net_cash_of_disposal_branch": [
+        null,
+        null
+      ],
+      "cash_received_of_othr_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_ia": [
+        9394287885.01,
+        -0.05485047493842396
+      ],
+      "invest_paid_cash": [
+        8629736232.36,
+        -0.1040193753992445
+      ],
+      "cash_paid_for_assets": [
+        145091199.71,
+        -0.17406446577857437
+      ],
+      "othrcash_paid_relating_to_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_ia": [
+        9292950287.33,
+        -0.06466135170672106
+      ],
+      "cash_received_of_absorb_invest": [
+        37840000.0,
+        0.5154185022026432
+      ],
+      "cash_received_from_investor": [
+        37840000.0,
+        0.5154185022026432
+      ],
+      "cash_received_from_bond_issue": [
+        null,
+        null
+      ],
+      "cash_received_of_borrowing": [
+        244846302.0,
+        0.35315474883075954
+      ],
+      "cash_received_of_othr_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_fa": [
+        282686302.0,
+        0.3728314603468593
+      ],
+      "cash_pay_for_debt": [
+        179770412.14,
+        0.15465251721261636
+      ],
+      "cash_paid_of_distribution": [
+        537466133.14,
+        1.5079677888640062
+      ],
+      "branch_paid_to_minority_holder": [
+        49180393.98,
+        -0.020496241149583313
+      ],
+      "othrcash_paid_relating_to_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_fa": [
+        830243060.0,
+        1.2439264704412747
+      ],
+      "effect_of_exchange_chg_on_cce": [
+        12166772.22,
+        1.7420647927301134
+      ],
+      "net_increase_in_cce": [
+        532881420.11,
+        0.07422700148006164
+      ],
+      "initial_balance_of_cce": [
+        3701187691.11,
+        0.1547708701763559
+      ],
+      "final_balance_of_cce": [
+        4234069111.22,
+        0.14397578955261967
+      ],
+      "cash_received_of_sales_service": [
+        5878886686.62,
+        0.17775201078097339
+      ],
+      "refund_of_tax_and_levies": [
+        112512986.41,
+        0.02346550373672426
+      ],
+      "goods_buy_and_service_cash_pay": [
+        2059301600.48,
+        0.154939562963745
+      ],
+      "net_cash_amt_from_branch": [
+        518122855.26,
+        3.0444689715189535
+      ]
+    },
+    {
+      "report_date": 1514649600000,
+      "report_name": "2017年报",
+      "ctime": null,
+      "ncf_from_oa": [
+        672450133.35,
+        -0.3951920845443157
+      ],
+      "ncf_from_ia": [
+        4086921.95,
+        1.0012395973613317
+      ],
+      "ncf_from_fa": [
+        -164080871.94,
+        -1.0567703451825865
+      ],
+      "cash_received_of_othr_oa": [
+        268015630.66,
+        -0.36490697352788865
+      ],
+      "sub_total_of_ci_from_oa": [
+        5369565744.65,
+        0.01038071071542366
+      ],
+      "cash_paid_to_employee_etc": [
+        1758097418.84,
+        0.29670650616057914
+      ],
+      "payments_of_all_taxes": [
+        461990330.0,
+        0.10753723645786087
+      ],
+      "othrcash_paid_relating_to_oa": [
+        693989453.77,
+        -0.25211516716687166
+      ],
+      "sub_total_of_cos_from_oa": [
+        4697115611.3,
+        0.11768022362470588
+      ],
+      "cash_received_of_dspsl_invest": [
+        9695939505.01,
+        0.6358561579716937
+      ],
+      "invest_income_cash_received": [
+        235083625.72,
+        3.311943102109592
+      ],
+      "net_cash_of_disposal_assets": [
+        8449551.54,
+        10.971910536942756
+      ],
+      "net_cash_of_disposal_branch": [
+        null,
+        null
+      ],
+      "cash_received_of_othr_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_ia": [
+        9939472682.27,
+        0.661131408947853
+      ],
+      "invest_paid_cash": [
+        9631610322.16,
+        0.05977181822598213
+      ],
+      "cash_paid_for_assets": [
+        175668915.67,
+        -0.013702295644927932
+      ],
+      "othrcash_paid_relating_to_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_ia": [
+        9935385760.32,
+        0.07056217604249643
+      ],
+      "cash_received_of_absorb_invest": [
+        24970000.0,
+        -0.9920209619561497
+      ],
+      "cash_received_from_investor": [
+        24970000.0,
+        0.9834146186474335
+      ],
+      "cash_received_from_bond_issue": [
+        null,
+        null
+      ],
+      "cash_received_of_borrowing": [
+        180944790.1,
+        -0.29280029591497714
+      ],
+      "cash_received_of_othr_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_fa": [
+        205914790.1,
+        -0.9391740381921311
+      ],
+      "cash_pay_for_debt": [
+        155692218.62,
+        -0.4046498608246765
+      ],
+      "cash_paid_of_distribution": [
+        214303443.42,
+        -0.08237119896635132
+      ],
+      "branch_paid_to_minority_holder": [
+        50209500.0,
+        2.0283172496984316
+      ],
+      "othrcash_paid_relating_to_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_fa": [
+        369995662.04,
+        -0.2526157782236192
+      ],
+      "effect_of_exchange_chg_on_cce": [
+        -16395835.43,
+        -2.763089577612543
+      ],
+      "net_increase_in_cce": [
+        496060347.93,
+        -0.3056476928902717
+      ],
+      "initial_balance_of_cce": [
+        3205127343.18,
+        0.2868350532145288
+      ],
+      "final_balance_of_cce": [
+        3701187691.11,
+        0.1547708701763559
+      ],
+      "cash_received_of_sales_service": [
+        4991616768.9,
+        0.052497504360348064
+      ],
+      "refund_of_tax_and_levies": [
+        109933345.09,
+        -0.26588001619941476
+      ],
+      "goods_buy_and_service_cash_pay": [
+        1783038408.69,
+        0.18736963009830696
+      ],
+      "net_cash_amt_from_branch": [
+        128106522.49,
+        8.12400320675077
+      ]
+    },
+    {
+      "report_date": 1483113600000,
+      "report_name": "2016年报",
+      "ctime": null,
+      "ncf_from_oa": [
+        1111840827.75,
+        0.2964942585811267
+      ],
+      "ncf_from_ia": [
+        -3296975354.65,
+        -9.327374469169605
+      ],
+      "ncf_from_fa": [
+        2890256724.92,
+        6.361228146231791
+      ],
+      "cash_received_of_othr_oa": [
+        422010035.52,
+        0.250900710779423
+      ],
+      "sub_total_of_ci_from_oa": [
+        5314398511.08,
+        -0.010567441783559
+      ],
+      "cash_paid_to_employee_etc": [
+        1355817535.03,
+        0.34360207480098537
+      ],
+      "payments_of_all_taxes": [
+        417132999.95,
+        -0.22814574540213323
+      ],
+      "othrcash_paid_relating_to_oa": [
+        927936258.77,
+        0.05123224610261469
+      ],
+      "sub_total_of_cos_from_oa": [
+        4202557683.33,
+        -0.06890875874513314
+      ],
+      "cash_received_of_dspsl_invest": [
+        5927134520.82,
+        0.21675094037296147
+      ],
+      "invest_income_cash_received": [
+        54519185.47,
+        0.12815451222487775
+      ],
+      "net_cash_of_disposal_assets": [
+        705781.38,
+        -0.08151724756485676
+      ],
+      "net_cash_of_disposal_branch": [
+        1196436.16,
+        null
+      ],
+      "cash_received_of_othr_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_ia": [
+        5983555923.83,
+        0.21607735959941402
+      ],
+      "invest_paid_cash": [
+        9088381250.11,
+        0.8296727924332354
+      ],
+      "cash_paid_for_assets": [
+        178109423.65,
+        0.05750868116634351
+      ],
+      "othrcash_paid_relating_to_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_ia": [
+        9280531278.48,
+        0.7712219859847985
+      ],
+      "cash_received_of_absorb_invest": [
+        3129449924.01,
+        2127.8774993265306
+      ],
+      "cash_received_from_investor": [
+        12589400.0,
+        7.56421768707483
+      ],
+      "cash_received_from_bond_issue": [
+        null,
+        null
+      ],
+      "cash_received_of_borrowing": [
+        255860952.79,
+        null
+      ],
+      "cash_received_of_othr_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_fa": [
+        3385310876.8,
+        2301.932569251701
+      ],
+      "cash_pay_for_debt": [
+        261513701.56,
+        null
+      ],
+      "cash_paid_of_distribution": [
+        233540450.32,
+        -0.5679764897123087
+      ],
+      "branch_paid_to_minority_holder": [
+        16580000.0,
+        5.677603222132848
+      ],
+      "othrcash_paid_relating_to_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_fa": [
+        495054151.88,
+        -0.08420561755088148
+      ],
+      "effect_of_exchange_chg_on_cce": [
+        9299490.87,
+        44.43661102459123
+      ],
+      "net_increase_in_cce": [
+        714421688.89,
+        723.3826125619998
+      ],
+      "initial_balance_of_cce": [
+        2490705654.29,
+        -0.00039691044662412163
+      ],
+      "final_balance_of_cce": [
+        3205127343.18,
+        0.2868350532145288
+      ],
+      "cash_received_of_sales_service": [
+        4742640004.58,
+        -0.013992977298469322
+      ],
+      "refund_of_tax_and_levies": [
+        149748470.98,
+        -0.33102463986078307
+      ],
+      "goods_buy_and_service_cash_pay": [
+        1501670889.58,
+        -0.2785107251644652
+      ],
+      "net_cash_amt_from_branch": [
+        14040604.72,
+        -0.864968655670516
+      ]
+    },
+    {
+      "report_date": 1451491200000,
+      "report_name": "2015年报",
+      "ctime": null,
+      "ncf_from_oa": [
+        857574817.93,
+        -0.22646170830471737
+      ],
+      "ncf_from_ia": [
+        -319246228.99,
+        -1.3282133609272742
+      ],
+      "ncf_from_fa": [
+        -539103475.19,
+        -3.401654556748765
+      ],
+      "cash_received_of_othr_oa": [
+        337364933.83,
+        3.513321211676488
+      ],
+      "sub_total_of_ci_from_oa": [
+        5371157909.6,
+        0.15981294040700522
+      ],
+      "cash_paid_to_employee_etc": [
+        1009091575.89,
+        0.4438302634852102
+      ],
+      "payments_of_all_taxes": [
+        540429747.54,
+        0.24899734893503936
+      ],
+      "othrcash_paid_relating_to_oa": [
+        882712894.52,
+        0.922996994043527
+      ],
+      "sub_total_of_cos_from_oa": [
+        4513583091.67,
+        0.2813883490439459
+      ],
+      "cash_received_of_dspsl_invest": [
+        4871280000.0,
+        -0.2303045327084943
+      ],
+      "invest_income_cash_received": [
+        48325991.59,
+        -0.02105158538291453
+      ],
+      "net_cash_of_disposal_assets": [
+        768420.94,
+        8.45780743867547
+      ],
+      "net_cash_of_disposal_branch": [
+        null,
+        null
+      ],
+      "cash_received_of_othr_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_ia": [
+        4920374412.53,
+        -0.22857433458743595
+      ],
+      "invest_paid_cash": [
+        4967216700.0,
+        -0.22563890188008606
+      ],
+      "cash_paid_for_assets": [
+        168423604.29,
+        0.7614603510373681
+      ],
+      "othrcash_paid_relating_to_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_ia": [
+        5239620641.52,
+        -0.19581079739736762
+      ],
+      "cash_received_of_absorb_invest": [
+        1470000.0,
+        -0.9464675892206846
+      ],
+      "cash_received_from_investor": [
+        1470000.0,
+        -0.9464675892206846
+      ],
+      "cash_received_from_bond_issue": [
+        null,
+        null
+      ],
+      "cash_received_of_borrowing": [
+        null,
+        null
+      ],
+      "cash_received_of_othr_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_fa": [
+        1470000.0,
+        -0.9464675892206846
+      ],
+      "cash_pay_for_debt": [
+        null,
+        null
+      ],
+      "cash_paid_of_distribution": [
+        540573475.19,
+        2.6053263198109966
+      ],
+      "branch_paid_to_minority_holder": [
+        2482926.8,
+        4.067197551020408
+      ],
+      "othrcash_paid_relating_to_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_fa": [
+        540573475.19,
+        2.6053263198109966
+      ],
+      "effect_of_exchange_chg_on_cce": [
+        -214093.38,
+        0.9036376498686234
+      ],
+      "net_increase_in_cce": [
+        -988979.63,
+        -1.0011678757458466
+      ],
+      "initial_balance_of_cce": [
+        2491694633.92,
+        0.514822712545332
+      ],
+      "final_balance_of_cce": [
+        2490705654.29,
+        -0.00039691044662412163
+      ],
+      "cash_received_of_sales_service": [
+        4809945462.24,
+        0.09912177072795915
+      ],
+      "refund_of_tax_and_levies": [
+        223847513.53,
+        0.24266499432829286
+      ],
+      "goods_buy_and_service_cash_pay": [
+        2081348873.72,
+        0.077416201966447
+      ],
+      "net_cash_amt_from_branch": [
+        103980337.23,
+        19.027204635032827
+      ]
+    },
+    {
+      "report_date": 1419955200000,
+      "report_name": "2014年报",
+      "ctime": null,
+      "ncf_from_oa": [
+        1108639128.97,
+        0.5499080110055299
+      ],
+      "ncf_from_ia": [
+        -137120692.78,
+        0.845310791114673
+      ],
+      "ncf_from_fa": [
+        -122477461.2,
+        0.34081125360904263
+      ],
+      "cash_received_of_othr_oa": [
+        74748708.99,
+        -0.773973021048361
+      ],
+      "sub_total_of_ci_from_oa": [
+        4631055338.73,
+        0.28452350772042456
+      ],
+      "cash_paid_to_employee_etc": [
+        698899033.64,
+        0.4815999658532391
+      ],
+      "payments_of_all_taxes": [
+        432690868.4,
+        0.23317981196140777
+      ],
+      "othrcash_paid_relating_to_oa": [
+        459029783.85,
+        -0.29359265491931774
+      ],
+      "sub_total_of_cos_from_oa": [
+        3522416209.76,
+        0.2188386324919833
+      ],
+      "cash_received_of_dspsl_invest": [
+        6328840700.0,
+        0.6683381310135759
+      ],
+      "invest_income_cash_received": [
+        49365207.47,
+        1.7599928840397452
+      ],
+      "net_cash_of_disposal_assets": [
+        81247.26,
+        -0.5749532563602217
+      ],
+      "net_cash_of_disposal_branch": [
+        null,
+        null
+      ],
+      "cash_received_of_othr_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_ia": [
+        6378287154.73,
+        0.6491089048849173
+      ],
+      "invest_paid_cash": [
+        6414600000.0,
+        0.39444794678376555
+      ],
+      "cash_paid_for_assets": [
+        95615892.91,
+        -0.3792964463674059
+      ],
+      "othrcash_paid_relating_to_ia": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_ia": [
+        6515407847.51,
+        0.3704690748370135
+      ],
+      "cash_received_of_absorb_invest": [
+        27460000.0,
+        1.4365572315882875
+      ],
+      "cash_received_from_investor": [
+        27460000.0,
+        1.4365572315882875
+      ],
+      "cash_received_from_bond_issue": [
+        null,
+        null
+      ],
+      "cash_received_of_borrowing": [
+        null,
+        null
+      ],
+      "cash_received_of_othr_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_ci_from_fa": [
+        27460000.0,
+        1.4365572315882875
+      ],
+      "cash_pay_for_debt": [
+        null,
+        null
+      ],
+      "cash_paid_of_distribution": [
+        149937461.2,
+        -0.20952000975400298
+      ],
+      "branch_paid_to_minority_holder": [
+        490000.0,
+        -0.8270603510951576
+      ],
+      "othrcash_paid_relating_to_fa": [
+        null,
+        null
+      ],
+      "sub_total_of_cos_from_fa": [
+        149937461.2,
+        -0.2391676081828822
+      ],
+      "effect_of_exchange_chg_on_cce": [
+        -2221753.41,
+        -0.2836395729338997
+      ],
+      "net_increase_in_cce": [
+        846819221.58,
+        3.3610335941636307
+      ],
+      "initial_balance_of_cce": [
+        1644875412.34,
+        -0.17901545057878027
+      ],
+      "final_balance_of_cce": [
+        2491694633.92,
+        0.514822712545332
+      ],
+      "cash_received_of_sales_service": [
+        4376171585.66,
+        0.4128715562591787
+      ],
+      "refund_of_tax_and_levies": [
+        180135044.08,
+        0.016539639669808297
+      ],
+      "goods_buy_and_service_cash_pay": [
+        1931796523.87,
+        0.36274697570687425
+      ],
+      "net_cash_amt_from_branch": [
+        5191954.6,
+        null
+      ]
+    }
+  ],
+  "profit": [
+    {
+      "report_date": 1577721600000,
+      "report_name": "2019年报",
+      "ctime": 1585568752000,
+      "net_profit": [
+        883376877.88,
+        0.12674861455106629
+      ],
+      "net_profit_atsopc": [
+        757975682.12,
+        0.13080564720913007
+      ],
+      "total_revenue": [
+        6496265096.84,
+        0.19001406710162333
+      ],
+      "op": [
+        1036110584.99,
+        0.1423444764137837
+      ],
+      "income_from_chg_in_fv": [
+        null,
+        null
+      ],
+      "invest_incomes_from_rr": [
+        16826457.27,
+        0.18245756677895725
+      ],
+      "invest_income": [
+        75324559.26,
+        -0.27553859883220405
+      ],
+      "exchg_gain": [
+        null,
+        null
+      ],
+      "operating_taxes_and_surcharge": [
+        48341065.71,
+        0.07919901517282016
+      ],
+      "asset_impairment_loss": [
+        69058855.56,
+        -0.5615420404042756
+      ],
+      "non_operating_income": [
+        20219199.82,
+        2.3066651227102115
+      ],
+      "non_operating_payout": [
+        22379331.33,
+        0.6659801784525181
+      ],
+      "profit_total_amt": [
+        1033950453.48,
+        0.14923584397162398
+      ],
+      "minority_gal": [
+        125401195.76,
+        0.10283287400862738
+      ],
+      "basic_eps": [
+        0.31,
+        0.10714285714285703
+      ],
+      "dlt_earnings_per_share": [
+        0.31,
+        0.10714285714285703
+      ],
+      "othr_compre_income_atoopc": [
+        93840369.74,
+        1.3407009750398484
+      ],
+      "othr_compre_income_atms": [
+        null,
+        null
+      ],
+      "total_compre_income": [
+        977217247.62,
+        0.9214921872688919
+      ],
+      "total_compre_income_atsopc": [
+        851816051.86,
+        1.1572400937365672
+      ],
+      "total_compre_income_atms": [
+        125401195.76,
+        0.10283287400862738
+      ],
+      "othr_compre_income": [
+        93840369.74,
+        1.3407009750398484
+      ],
+      "net_profit_after_nrgal_atsolc": [
+        640183340.02,
+        0.19143008391969762
+      ],
+      "income_tax_expenses": [
+        150573575.6,
+        0.3016401025141971
+      ],
+      "credit_impairment_loss": [
+        9809866.12,
+        null
+      ],
+      "revenue": [
+        6496265096.84,
+        0.19001406710162333
+      ],
+      "operating_costs": [
+        5679164403.9,
+        0.1821046393403441
+      ],
+      "operating_cost": [
+        3963780374.34,
+        0.23871418038440412
+      ],
+      "sales_fee": [
+        720007038.32,
+        0.00749229800960981
+      ],
+      "manage_fee": [
+        399468001.72,
+        0.035438172442806094
+      ],
+      "financing_expenses": [
+        -69238804.32,
+        -0.2060662291039493
+      ],
+      "rad_cost": [
+        537938006.45,
+        0.498310523578745
+      ],
+      "finance_cost_interest_fee": [
+        3750113.84,
+        0.16095077880343814
+      ],
+      "finance_cost_interest_income": [
+        59344922.38,
+        0.26666444649521626
+      ],
+      "asset_disposal_income": [
+        768179.93,
+        -0.07084372714469243
+      ],
+      "other_income": [
+        142917152.86,
+        -0.031097948131471903
+      ],
+      "noncurrent_assets_dispose_gain": [
+        null,
+        null
+      ],
+      "noncurrent_asset_disposal_loss": [
+        null,
+        null
+      ],
+      "net_profit_bi": [
+        null,
+        null
+      ],
+      "continous_operating_np": [
+        883376877.88,
+        0.12674861455106629
+      ]
+    },
+    {
+      "report_date": 1546185600000,
+      "report_name": "2018年报",
+      "ctime": 1585568405000,
+      "net_profit": [
+        784005293.17,
+        -0.1867164165292251
+      ],
+      "net_profit_atsopc": [
+        670297043.52,
+        -0.2547991176871977
+      ],
+      "total_revenue": [
+        5458981768.73,
+        0.24532584888840928
+      ],
+      "op": [
+        907003628.4,
+        -0.1982379955568898
+      ],
+      "income_from_chg_in_fv": [
+        null,
+        null
+      ],
+      "invest_incomes_from_rr": [
+        14230072.81,
+        -0.09250671900314555
+      ],
+      "invest_income": [
+        103973184.96,
+        -0.7965105520087835
+      ],
+      "exchg_gain": [
+        null,
+        null
+      ],
+      "operating_taxes_and_surcharge": [
+        44793467.22,
+        0.14098651601126413
+      ],
+      "asset_impairment_loss": [
+        157503938.63,
+        1.0989984956955248
+      ],
+      "non_operating_income": [
+        6114680.22,
+        0.9152153140494235
+      ],
+      "non_operating_payout": [
+        13433131.81,
+        0.0783153080686544
+      ],
+      "profit_total_amt": [
+        899685176.81,
+        -0.19814018910428466
+      ],
+      "minority_gal": [
+        113708249.65,
+        0.7625124668927821
+      ],
+      "basic_eps": [
+        0.28,
+        -0.24324324324324317
+      ],
+      "dlt_earnings_per_share": [
+        0.28,
+        -0.24324324324324317
+      ],
+      "othr_compre_income_atoopc": [
+        -275433229.18,
+        -0.2395367953015647
+      ],
+      "othr_compre_income_atms": [
+        null,
+        null
+      ],
+      "total_compre_income": [
+        508572063.99,
+        -0.31440193831196456
+      ],
+      "total_compre_income_atsopc": [
+        394863814.34,
+        -0.4169845376746166
+      ],
+      "total_compre_income_atms": [
+        113708249.65,
+        0.7625124668927821
+      ],
+      "othr_compre_income": [
+        -275433229.18,
+        -0.2395367953015647
+      ],
+      "net_profit_after_nrgal_atsolc": [
+        537323464.18,
+        0.3020911126030394
+      ],
+      "income_tax_expenses": [
+        115679883.64,
+        -0.2678404532435499
+      ],
+      "credit_impairment_loss": [
+        null,
+        null
+      ],
+      "revenue": [
+        5458981768.73,
+        0.24532584888840928
+      ],
+      "operating_costs": [
+        4804282307.08,
+        0.22672361889358203
+      ],
+      "operating_cost": [
+        3199915232.35,
+        0.2546397658031702
+      ],
+      "sales_fee": [
+        714652647.71,
+        0.1382827923089596
+      ],
+      "manage_fee": [
+        385796093.24,
+        0.18297873883377477
+      ],
+      "financing_expenses": [
+        -57408791.2,
+        -4.3258260160855615
+      ],
+      "rad_cost": [
+        359029719.13,
+        0.1641167556035985
+      ],
+      "finance_cost_interest_fee": [
+        3230209.16,
+        0.4214737373878504
+      ],
+      "finance_cost_interest_income": [
+        46851336.63,
+        0.6368906621643883
+      ],
+      "asset_disposal_income": [
+        826749.98,
+        -0.5269888849165045
+      ],
+      "other_income": [
+        147504231.81,
+        -0.025342053506076725
+      ],
+      "noncurrent_assets_dispose_gain": [
+        null,
+        null
+      ],
+      "noncurrent_asset_disposal_loss": [
+        null,
+        null
+      ],
+      "net_profit_bi": [
+        null,
+        null
+      ],
+      "continous_operating_np": [
+        784005293.17,
+        -0.1867164165292251
+      ]
+    },
+    {
+      "report_date": 1514649600000,
+      "report_name": "2017年报",
+      "ctime": 1556277750000,
+      "net_profit": [
+        963999900.04,
+        0.0811349831972755
+      ],
+      "net_profit_atsopc": [
+        899485037.43,
+        0.06577574050506309
+      ],
+      "total_revenue": [
+        4383577016.09,
+        -0.0090587960177562
+      ],
+      "op": [
+        1131262922.63,
+        0.3764940969700881
+      ],
+      "income_from_chg_in_fv": [
+        null,
+        null
+      ],
+      "invest_incomes_from_rr": [
+        15680637.1,
+        4.424968822313725
+      ],
+      "invest_income": [
+        510951235.98,
+        8.7219559292008
+      ],
+      "exchg_gain": [
+        null,
+        null
+      ],
+      "operating_taxes_and_surcharge": [
+        39258542.14,
+        -0.1887498338580206
+      ],
+      "asset_impairment_loss": [
+        75037661.51,
+        4.218326955564591
+      ],
+      "non_operating_income": [
+        3192685.53,
+        -0.9828141048284469
+      ],
+      "non_operating_payout": [
+        12457517.49,
+        1.4301098017749687
+      ],
+      "profit_total_amt": [
+        1121998090.67,
+        0.1192102288250989
+      ],
+      "minority_gal": [
+        64514862.61,
+        0.3529863760118108
+      ],
+      "basic_eps": [
+        0.37,
+        0.027777777777777804
+      ],
+      "dlt_earnings_per_share": [
+        0.37,
+        0.027777777777777804
+      ],
+      "othr_compre_income_atoopc": [
+        -222206577.67,
+        -2.737013204869491
+      ],
+      "othr_compre_income_atms": [
+        null,
+        null
+      ],
+      "total_compre_income": [
+        741793322.37,
+        -0.27245204367525155
+      ],
+      "total_compre_income_atsopc": [
+        677278459.76,
+        -0.30313737507695765
+      ],
+      "total_compre_income_atms": [
+        64514862.61,
+        0.3529863760118108
+      ],
+      "othr_compre_income": [
+        -222206577.67,
+        -2.737013204869491
+      ],
+      "net_profit_after_nrgal_atsolc": [
+        412661955.05,
+        -0.4358858689871725
+      ],
+      "income_tax_expenses": [
+        157998190.63,
+        0.4255201191247255
+      ],
+      "credit_impairment_loss": [
+        null,
+        null
+      ],
+      "revenue": [
+        4383577016.09,
+        -0.0090587960177562
+      ],
+      "operating_costs": [
+        3916352659.3,
+        0.07158680881882741
+      ],
+      "operating_cost": [
+        2550465336.4,
+        0.0877035534024396
+      ],
+      "sales_fee": [
+        627834007.98,
+        -0.10261601340325097
+      ],
+      "manage_fee": [
+        326122592.55,
+        -0.4256274709692238
+      ],
+      "financing_expenses": [
+        -10779321.56,
+        0.4685385844820909
+      ],
+      "rad_cost": [
+        308413840.28,
+        null
+      ],
+      "finance_cost_interest_fee": [
+        2272436.75,
+        null
+      ],
+      "finance_cost_interest_income": [
+        28622154.01,
+        null
+      ],
+      "asset_disposal_income": [
+        1747844.72,
+        3.855359842045668
+      ],
+      "other_income": [
+        151339485.14,
+        null
+      ],
+      "noncurrent_assets_dispose_gain": [
+        null,
+        null
+      ],
+      "noncurrent_asset_disposal_loss": [
+        null,
+        null
+      ],
+      "net_profit_bi": [
+        null,
+        null
+      ],
+      "continous_operating_np": [
+        963999900.04,
+        0.0811349831972755
+      ]
+    },
+    {
+      "report_date": 1483113600000,
+      "report_name": "2016年报",
+      "ctime": 1522410387000,
+      "net_profit": [
+        891655450.08,
+        -0.0282516852253846
+      ],
+      "net_profit_atsopc": [
+        843972144.65,
+        -0.060651162296351833
+      ],
+      "total_revenue": [
+        4423649958.72,
+        0.11344459268056054
+      ],
+      "op": [
+        821843642.57,
+        -0.002865713577052434
+      ],
+      "income_from_chg_in_fv": [
+        null,
+        null
+      ],
+      "invest_incomes_from_rr": [
+        2890456.63,
+        -0.4369116111676404
+      ],
+      "invest_income": [
+        52556423.8,
+        0.0860498765293106
+      ],
+      "exchg_gain": [
+        null,
+        null
+      ],
+      "operating_taxes_and_surcharge": [
+        48392646.04,
+        -0.11538597815314997
+      ],
+      "asset_impairment_loss": [
+        14379639.71,
+        -0.29973990032528497
+      ],
+      "non_operating_income": [
+        185773595.04,
+        -0.19520275835206904
+      ],
+      "non_operating_payout": [
+        5126318.77,
+        2.3314157135317126
+      ],
+      "profit_total_amt": [
+        1002490918.84,
+        -0.0484183129437988
+      ],
+      "minority_gal": [
+        47683305.43,
+        1.4947455477208902
+      ],
+      "basic_eps": [
+        0.36,
+        -0.46268656716417916
+      ],
+      "dlt_earnings_per_share": [
+        0.36,
+        -0.46268656716417916
+      ],
+      "othr_compre_income_atoopc": [
+        127924518.39,
+        55.10583291109981
+      ],
+      "othr_compre_income_atms": [
+        null,
+        null
+      ],
+      "total_compre_income": [
+        1019579968.47,
+        0.10840939483300986
+      ],
+      "total_compre_income_atsopc": [
+        971896663.04,
+        0.07899183052885299
+      ],
+      "total_compre_income_atms": [
+        47683305.43,
+        1.4947455477208902
+      ],
+      "othr_compre_income": [
+        127924518.39,
+        55.10583291109981
+      ],
+      "net_profit_after_nrgal_atsolc": [
+        731522102.29,
+        -0.11253114553194456
+      ],
+      "income_tax_expenses": [
+        110835468.76,
+        -0.184559643867847
+      ],
+      "credit_impairment_loss": [
+        null,
+        null
+      ],
+      "revenue": [
+        4423649958.72,
+        0.11344459268056054
+      ],
+      "operating_costs": [
+        3654722722.48,
+        0.14312682459348527
+      ],
+      "operating_cost": [
+        2344816589.43,
+        0.23452845322705254
+      ],
+      "sales_fee": [
+        699626934.91,
+        -0.016484176028009934
+      ],
+      "manage_fee": [
+        567789328.47,
+        0.07955236462931091
+      ],
+      "financing_expenses": [
+        -20282416.08,
+        -0.3727003331791154
+      ],
+      "rad_cost": [
+        null,
+        null
+      ],
+      "finance_cost_interest_fee": [
+        null,
+        null
+      ],
+      "finance_cost_interest_income": [
+        null,
+        null
+      ],
+      "asset_disposal_income": [
+        359982.53,
+        null
+      ],
+      "other_income": [
+        null,
+        null
+      ],
+      "noncurrent_assets_dispose_gain": [
+        null,
+        null
+      ],
+      "noncurrent_asset_disposal_loss": [
+        null,
+        null
+      ],
+      "net_profit_bi": [
+        null,
+        null
+      ],
+      "continous_operating_np": [
+        891655450.08,
+        null
+      ]
+    },
+    {
+      "report_date": 1451491200000,
+      "report_name": "2015年报",
+      "ctime": 1491559522000,
+      "net_profit": [
+        917578591.62,
+        0.12252802307043745
+      ],
+      "net_profit_atsopc": [
+        898465097.07,
+        0.11272588909478622
+      ],
+      "total_revenue": [
+        3972941256.17,
+        0.2604868431210789
+      ],
+      "op": [
+        824205579.69,
+        0.16406327986479463
+      ],
+      "income_from_chg_in_fv": [
+        null,
+        null
+      ],
+      "invest_incomes_from_rr": [
+        5133220.09,
+        -0.12294886666846007
+      ],
+      "invest_income": [
+        48392274.55,
+        -0.1074803428792672
+      ],
+      "exchg_gain": [
+        null,
+        null
+      ],
+      "operating_taxes_and_surcharge": [
+        54704814.58,
+        0.14693109515148356
+      ],
+      "asset_impairment_loss": [
+        20534712.34,
+        678.1766774908729
+      ],
+      "non_operating_income": [
+        230832792.94,
+        0.0858277356925239
+      ],
+      "non_operating_payout": [
+        1538780.87,
+        -0.5904372951477318
+      ],
+      "profit_total_amt": [
+        1053499591.76,
+        0.14901526731038067
+      ],
+      "minority_gal": [
+        19113494.55,
+        0.9158673748929101
+      ],
+      "basic_eps": [
+        0.67,
+        -0.25555555555555554
+      ],
+      "dlt_earnings_per_share": [
+        0.67,
+        -0.25555555555555554
+      ],
+      "othr_compre_income_atoopc": [
+        2280057.38,
+        -0.17756190683821668
+      ],
+      "othr_compre_income_atms": [
+        null,
+        null
+      ],
+      "total_compre_income": [
+        919858649.0,
+        0.12151369728226556
+      ],
+      "total_compre_income_atsopc": [
+        900745154.45,
+        0.11173261353673677
+      ],
+      "total_compre_income_atms": [
+        19113494.55,
+        0.9158673748929101
+      ],
+      "othr_compre_income": [
+        2280057.38,
+        -0.17756190683821668
+      ],
+      "net_profit_after_nrgal_atsolc": [
+        824279182.99,
+        0.14011859455802053
+      ],
+      "income_tax_expenses": [
+        135921000.14,
+        0.3667247551450827
+      ],
+      "credit_impairment_loss": [
+        null,
+        null
+      ],
+      "revenue": [
+        3972941256.17,
+        0.2604868431210789
+      ],
+      "operating_costs": [
+        3197127951.03,
+        0.2798299564080238
+      ],
+      "operating_cost": [
+        1899362127.54,
+        0.33357794837097887
+      ],
+      "sales_fee": [
+        711353003.03,
+        0.22638028711833486
+      ],
+      "manage_fee": [
+        525948853.5,
+        0.16538655086718493
+      ],
+      "financing_expenses": [
+        -14775559.96,
+        -1.8470144464023346
+      ],
+      "rad_cost": [
+        null,
+        null
+      ],
+      "finance_cost_interest_fee": [
+        null,
+        null
+      ],
+      "finance_cost_interest_income": [
+        null,
+        null
+      ],
+      "asset_disposal_income": [
+        null,
+        null
+      ],
+      "other_income": [
+        null,
+        null
+      ],
+      "noncurrent_assets_dispose_gain": [
+        464388.36,
+        -0.28222571988815054
+      ],
+      "noncurrent_asset_disposal_loss": [
+        360162.74,
+        0.984430581134113
+      ],
+      "net_profit_bi": [
+        null,
+        null
+      ],
+      "continous_operating_np": [
+        null,
+        null
+      ]
+    },
+    {
+      "report_date": 1419955200000,
+      "report_name": "2014年报",
+      "ctime": 1458893108000,
+      "net_profit": [
+        817421545.62,
+        0.14957327034193602
+      ],
+      "net_profit_atsopc": [
+        807445127.21,
+        0.1451881053654235
+      ],
+      "total_revenue": [
+        3151910135.24,
+        0.25279758750068587
+      ],
+      "op": [
+        708041902.83,
+        0.15415176928410598
+      ],
+      "income_from_chg_in_fv": [
+        null,
+        null
+      ],
+      "invest_incomes_from_rr": [
+        5852817.35,
+        1.6971618222310423
+      ],
+      "invest_income": [
+        54219841.73,
+        4.712893562473267
+      ],
+      "exchg_gain": [
+        null,
+        null
+      ],
+      "operating_taxes_and_surcharge": [
+        47696687.98,
+        0.3701155224752932
+      ],
+      "asset_impairment_loss": [
+        -30324.01,
+        0.8977921197426737
+      ],
+      "non_operating_income": [
+        212586937.46,
+        0.29608905554132053
+      ],
+      "non_operating_payout": [
+        3757131.33,
+        1.4110621607661227
+      ],
+      "profit_total_amt": [
+        916871708.96,
+        0.18163103276535209
+      ],
+      "minority_gal": [
+        9976418.41,
+        0.6658514021913955
+      ],
+      "basic_eps": [
+        0.9,
+        0.1392405063291139
+      ],
+      "dlt_earnings_per_share": [
+        0.9,
+        0.1392405063291139
+      ],
+      "othr_compre_income_atoopc": [
+        2772314.9,
+        9.4371948065165
+      ],
+      "othr_compre_income_atms": [
+        null,
+        null
+      ],
+      "total_compre_income": [
+        820193860.52,
+        0.15400535465351692
+      ],
+      "total_compre_income_atsopc": [
+        810217442.11,
+        0.14965580793680788
+      ],
+      "total_compre_income_atms": [
+        9976418.41,
+        0.6658514021913955
+      ],
+      "othr_compre_income": [
+        2772314.9,
+        9.4371948065165
+      ],
+      "net_profit_after_nrgal_atsolc": [
+        722976703.41,
+        0.14023800364568578
+      ],
+      "income_tax_expenses": [
+        99450163.34,
+        0.5330166703948328
+      ],
+      "credit_impairment_loss": [
+        null,
+        null
+      ],
+      "revenue": [
+        3151910135.24,
+        0.25279758750068587
+      ],
+      "operating_costs": [
+        2498088074.14,
+        0.3065899759991342
+      ],
+      "operating_cost": [
+        1424260299.04,
+        0.2473459028216072
+      ],
+      "sales_fee": [
+        580042757.13,
+        0.32103529326504676
+      ],
+      "manage_fee": [
+        451308497.69,
+        0.4702930953813936
+      ],
+      "financing_expenses": [
+        -5189843.69,
+        0.5041787639307201
+      ],
+      "rad_cost": [
+        null,
+        null
+      ],
+      "finance_cost_interest_fee": [
+        null,
+        null
+      ],
+      "finance_cost_interest_income": [
+        null,
+        null
+      ],
+      "asset_disposal_income": [
+        null,
+        null
+      ],
+      "other_income": [
+        null,
+        null
+      ],
+      "noncurrent_assets_dispose_gain": [
+        646983.84,
+        0.16502375906519612
+      ],
+      "noncurrent_asset_disposal_loss": [
+        181494.25,
+        2.7049563066682345
+      ],
+      "net_profit_bi": [
+        null,
+        null
+      ],
+      "continous_operating_np": [
+        null,
+        null
+      ]
+    }
+  ],
+  "name": "广电运通"
+}

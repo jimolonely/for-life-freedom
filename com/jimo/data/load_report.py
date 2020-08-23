@@ -120,7 +120,7 @@ class LoadReport(object):
                   'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site',
                   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                                 'Chrome/83.0.4103.61 Safari/537.36',
-                  'Cookie': 'device_id=24700f9f1986800ab4fcc880530dd0ed; s=cs1cqgondz; Hm_lvt_1db88642e346389874251b5a1eded6e3=1591531849; xq_a_token=ad923af9f68bb6a13ada0962232589cea11925c4; xqat=ad923af9f68bb6a13ada0962232589cea11925c4; xq_r_token=cf0e6f767c2318f1f1779fcee9323365f02e1b4b; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTU5NjE2MjgxNSwiY3RtIjoxNTkzODE3NzMwOTEwLCJjaWQiOiJkOWQwbjRBWnVwIn0.h7YD9sW64SgSSmrZ6qAjMlixbhfN-o0Vzv9xsGKGnE-LmlOQd9whbIjv_DMYkjDMoAdW8lNq--rFG2LctCbMA82gnwNKjwM4rpTZ34h4LPMxXpLgSAqQpsFOnYHLeVQY0jjFdY1fRD_W1G9bDSpU_doA33LIABlNxg_Knd4eOE9gbosD5D5TKg66sn2GE6M83EBhm66hZx85tJuB4TTQgepwb-mDU9BEtituHus_4Z6eEHDw7zYRfy46SoQZ58if-HOVVWdFiLUqu_bwmsnKsnijLh6DBRlGnVVq3D-ihjLZtosfL1AilCxeYyp8Qp9PUwUowqgnikRAzJZiWP4f6A; u=121593817789811; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1593913860'
+                  'Cookie': 'device_id=24700f9f1986800ab4fcc880530dd0ed; s=cs1cqgondz; __utmz=1.1591531896.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); aliyungf_tc=AQAAAEYyckhMKwQAIGN/fMMn1X9Kp/s2; acw_tc=2760824d15981418752867698e7074e12ee4202917ce062a213d0d243d90cc; xq_a_token=4db837b914fc72624d814986f5b37e2a3d9e9944; xqat=4db837b914fc72624d814986f5b37e2a3d9e9944; xq_r_token=2d6d6cc8e57501dfe571d2881cabc6a5f2542bf8; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTYwMDQ4MzAwNywiY3RtIjoxNTk4MTQxODI4MDUzLCJjaWQiOiJkOWQwbjRBWnVwIn0.j3KcwhIQOgyKMuaokXLSPL9EBgB6aOv_HPmmNw2GQyNdRWVcqrWjpvafbj909UcRrGFFHkJauDH2hwLmJR7fVIPKGMVJEo_bur4sUtNp3dQ9cOaxEfPaG9VDso9paaDXiVfjOQAsXPUGLf8D64_kNc96lBPN1yZE7GYJr_-KZEvqdxkv2x1JJjIZxB0KxADGhqcw4jWNAThDlQvOds22g9v0gwfSRvPPT6Un4yGQj5YZ4yPHADFUZzDtGtnfMLQbIqF9rtpz0tbg4dpgemNI3hiB4uU3bwx0tWrgZdammQNhxvaFjLiK3vxPjzzRharlqIgIlkJN6uUlYcnBcZnJUw; u=811598141875293; __utma=1.1774687431.1591531896.1595723400.1598142326.4; __utmc=1; __utmb=1.5.10.1598142326; Hm_lvt_1db88642e346389874251b5a1eded6e3=1595723847,1596953881,1598141859,1598143094; is_overseas=0; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1598143596'
                   }
         return header
 
@@ -135,11 +135,21 @@ if __name__ == '__main__':
     # r = LoadReport('SZ002081', 2019)
     # r = LoadReport('SZ002375', 2019)
     # 芝加哥交易所
-    r = LoadReport('CME', 2019, country='us')
+    # r = LoadReport('CME', 2019, country='us')
+    # 海康威视
+    # r = LoadReport('SZ002415', 2019)
+    # 大华股份
+    # r = LoadReport('SZ002236', 2019)
+    # 浩云科技(SZ:300448)
+    # r = LoadReport('SZ300448', 2019)
+    # 中威电子(SZ:300270)
+    # r = LoadReport('SZ300270', 2019)
+    # 广电运通(SZ:002152)
+    r = LoadReport('SZ002152', 2019)
+    r.write_json()
     # r.write_excel()
-    # r.write_json()
     # j = r.req_cash_flow()[0]
     # j = r.req_profit()[0]
-    j = r.req_asset()[0]
-    for k in sorted(j.keys()):
-        print('"{}":"",'.format(k))
+    # j = r.req_asset()[0]
+    # for k in sorted(j.keys()):
+    #     print('"{}":"",'.format(k))
